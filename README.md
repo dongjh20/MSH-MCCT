@@ -22,7 +22,7 @@ Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform,
 
 An corresponding overview of the MSH-MCCT is as follows.
 
-<img src="resources/MSH-framework.png" align="center" width="70%"/>
+<img src="resources/MSH-framework.jpg" align="center" width="70%"/>
 
 
 ## Demo videos
@@ -30,12 +30,12 @@ Cross-platform experiments are carried out on vehicle platooning, which is compo
 
 The formation of the platoon for experiment A and B is shown below.
 
-<img src="resources/formation.png" align="center" width="80%"/>
+<img src="resources/formation.jpg" align="center" width="80%"/>
 
 The detailed schematic diagram of the two experiments is illustrated below.
 Bridged by the mixed platform, human drivers and autonomous driving algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
 
-<img src="resources/MSH-snapshot.png" align="center" width="70%"/>
+<img src="resources/MSH-snapshot.jpg" align="center" width="70%"/>
 
 **Experiment A:** Mixing physical miniature vehicles and virtual vehicles
 
