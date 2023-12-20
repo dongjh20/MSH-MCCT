@@ -13,15 +13,15 @@ In this project, we present demo videos for our Connected and Autonomous Vehicle
 ## The notion of mixedDT
 By introducing Mixed Reality into classical DT, mixedDT bridges the physical and virtual spaces into an unified, integrated one, where physical entities coexist and interact with virtual entities via their digital counterparts. 
 
-The architecture comparison diagram of classic DT and mixedDT is as follows:
+The schematic diagram of the classical DT is as follows.
 
-<img src="resources/dt-architecture.jpg" align="center" width="50%"/>
+<img src="resources/dt-framework.pdf" align="center" width="70%"/>
 
 The schematic diagram of the proposed mixedDT is as follows.
 
-<img src="resources/mdt-architecture.jpg" align="center" width="50%"/>
+<img src="resources/mdt-framework.pdf" align="center" width="70%"/>
 
-## The architecture of the MCCT
+## The structure of the MSH-MCCT
 
 Under the framework of mixedDT, MCCT contains three major experimental platforms in the physical, virtual and mixed spaces respectively, and provides a unified access for various human-machine interfaces and external devices such as driving simulators.
 
