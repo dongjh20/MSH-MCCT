@@ -15,11 +15,11 @@ By introducing Mixed Reality into classical DT, mixedDT bridges the physical and
 
 The schematic diagram of the classical DT is as follows.
 
-<img src="resources/dt-framework.png" align="center" width="70%"/>
+<img src="resources/dt-framework.jpg" align="center" width="70%"/>
 
 The schematic diagram of the proposed mixedDT is as follows.
 
-<img src="resources/mdt-framework.png" align="center" width="70%"/>
+<img src="resources/mdt-framework.jpg" align="center" width="70%"/>
 
 ## The structure of the MSH-MCCT
 
