@@ -31,14 +31,14 @@ The methodological framework diagram for conducting multi-source human-in-the-lo
 ## Demo videos
 Two multi-source human-in-the-loop CAVs testing experiments are carried out on vehicle platooning, which is composed of different types of vehicles from different platforms in MSH-MCCT.
 
+The formation of the platoon for experiment A and B is shown below.
+
+<img src="resources/formation.jpg" align="center" width="100%"/>
+
 The detailed schematic diagram of the two experiments is illustrated below.
 Bridged by the mixed platform, human drivers and autonomous driving algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
 
 <img src="resources/MSH-snapshot.jpg" align="center" width="100%"/>
-
-The formation of the platoon for experiment A and B is shown below.
-
-<img src="resources/formation.jpg" align="center" width="100%"/>
 
 **Experiment A:** Mixing physical miniature vehicles and virtual vehicles
 
