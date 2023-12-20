@@ -1,5 +1,5 @@
-# multi-driver-access-digital-twin
-Multi-driver Access Digital Twin
+# Multi Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT)
+
 <!--课题组网站链接-->
 [![tsinghua-svm-thicv](https://img.shields.io/badge/Tsinghua_University-THICV-brightgreen)](https://www.labxing.com/thicv)
 
@@ -7,39 +7,13 @@ Multi-driver Access Digital Twin
 <a><img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>
 <a><img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"></a>
 
-<!--硬件条件-->
-![cloud-gpu](https://img.shields.io/badge/NVIDIA-RTX3090-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![unity-gpu](https://img.shields.io/badge/NVIDIA-RTX2080_SUPER-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![cloud-cpu](https://img.shields.io/badge/Intel-Xeon(R)_Gold_5220R_@2.20GHz-0071C5?style=for-the-badge&logo=intel&logoColor=white)
-![unitycpu](https://img.shields.io/badge/Intel-CORE_I7_10700K_@3.80GHz-0071C5?style=for-the-badge&logo=intel&logoColor=white)
-![cloud-host](https://img.shields.io/badge/Ubuntu-DELL_Precision_7920-0078D6?style=for-the-badge&logo=ubuntu&logoColor=white)
-![unity-host](https://img.shields.io/badge/Windows-Lenovo_ThinkStation_P340-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![HoloLens](https://img.shields.io/badge/Microsoft-HoloLens-258ffa?style=for-the-badge&logo=microsoft&logoColor=white)
 
-<!--用到的语言-->
-<a><img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white"></a>
-<a><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"></a>
-<a><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"></a>
-<a><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"></a>
-![matlab](https://img.shields.io/badge/MATLAB-258ffa?style=for-the-badge&logo=matlab&logoColor=white)
-
-<!--用到的软件-->
-![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white)
-<a><img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white"></a>
-![CLion](https://img.shields.io/badge/CLion-black?style=for-the-badge&logo=clion&logoColor=white)
-![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
-![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
-![](https://img.shields.io/badge/SCANeR_Studio-FA7343?style=for-the-badge)
-
-
-# Mixed Cloud Control Testbed (MCCT)
-
-In this project, we present demo videos for our miniature experimental platform, Mixed Cloud Control Testbed (MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
+In this project, we present demo videos for our Connected and Autonomous Vehicles (CAVs) testing platform, Multi Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
 
 ## The notion of mixedDT
-Combining Mixed Reality with Digital Twin, mixedDT integrates the virtual and physical spaces into a mixed one, where physical entities coexist and interact with virtual entities via their digital counterparts. 
+By introducing Mixed Reality into classical DT, mixedDT bridges the physical and virtual spaces into an unified, integrated one, where physical entities coexist and interact with virtual entities via their digital counterparts. 
 
-The schematic diagram of the classical Digital Twin is as follows.
+The architecture comparison diagram of classic DT and mixedDT is as follows:
 
 <img src="resources/dt-architecture.jpg" align="center" width="50%"/>
 
