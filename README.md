@@ -10,11 +10,11 @@ By introducing Mixed Reality into classical DT, mixedDT bridges the physical and
 
 The schematic diagram of the classical DT is as follows.
 
-<img src="resources/dt-framework.jpg" align="center" width="70%"/>
+<img src="resources/dt-framework.jpg" align="center" width="80%"/>
 
 The schematic diagram of the proposed mixedDT is as follows.
 
-<img src="resources/mdt-framework.jpg" align="center" width="70%"/>
+<img src="resources/mdt-framework.jpg" align="center" width="80%"/>
 
 ## The structure of the MSH-MCCT
 
@@ -22,7 +22,7 @@ Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform,
 
 An corresponding overview of the MSH-MCCT is as follows.
 
-<img src="resources/MSH-framework.jpg" align="center" width="70%"/>
+<img src="resources/MSH-framework.jpg" align="center" width="80%"/>
 
 
 ## Demo videos
@@ -35,7 +35,7 @@ The formation of the platoon for experiment A and B is shown below.
 The detailed schematic diagram of the two experiments is illustrated below.
 Bridged by the mixed platform, human drivers and autonomous driving algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
 
-<img src="resources/MSH-snapshot.jpg" align="center" width="70%"/>
+<img src="resources/MSH-snapshot.jpg" align="center" width="80%"/>
 
 **Experiment A:** Mixing physical miniature vehicles and virtual vehicles
 
