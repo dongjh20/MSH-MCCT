@@ -3,11 +3,6 @@
 <!--课题组网站链接-->
 [![tsinghua-svm-thicv](https://img.shields.io/badge/Tsinghua_University-THICV-brightgreen)](https://www.labxing.com/thicv)
 
-<!---用到的系统-->
-<a><img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>
-<a><img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"></a>
-
-
 In this project, we present demo videos for our Connected and Autonomous Vehicles (CAVs) testing platform, Multi Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
 
 ## The notion of mixedDT
@@ -23,26 +18,26 @@ The schematic diagram of the proposed mixedDT is as follows.
 
 ## The structure of the MSH-MCCT
 
-Under the framework of mixedDT, MCCT contains three major experimental platforms in the physical, virtual and mixed spaces respectively, and provides a unified access for various human-machine interfaces and external devices such as driving simulators.
+Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform, multi source control input and mixed platform. 
 
-<img src="resources/MCCT-architecture.jpg" align="center" width="50%"/>
+An corresponding overview of the MSH-MCCT is as follows.
 
-An corresponding overview of the MCCT is as follows.
+<img src="resources/MSH-framework.png" align="center" width="70%"/>
 
-<img src="resources/MCCT-overview.png" align="center" width="50%"/>
-
-The detailed physical architecture of the MCCT is as follows, which is not presented in paper due to space limitations.
-
-<img src="resources/MCCT-framework.png" align="center" width="80%"/>
 
 ## Demo videos
 Cross-platform experiments are carried out on vehicle platooning, which is composed of different types of vehicles from different platforms in MCCT.
 
+The formation of the platoon for experiment A and B is shown below.
+
+<img src="resources/formation.png" align="center" width="80%"/>
+
+The detailed schematic diagram of the two experiments is illustrated below.
+Bridged by the mixed platform, human drivers and autonomous driving algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
+
+<img src="resources/MSH-snapshot.png" align="center" width="70%"/>
+
 **Experiment A:** Mixing physical miniature vehicles and virtual vehicles
-
-The formation of the platoon for experiment A is shown below.
-
-<img src="resources/formation-experiment-A.jpg" align="center" width="50%"/>
 
 The video of the experiment process is shown below.
 
