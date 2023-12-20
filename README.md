@@ -41,17 +41,13 @@ Bridged by the mixed platform, human drivers and autonomous driving algorithms c
 
 <img src="resources/MSH-snapshot.jpg" align="center" width="100%"/>
 
-**Experiment A:** Mixing physical miniature vehicles and virtual vehicles
+**Experiment A:** Head vehicle encounters a sinusoidal disturbance.
 
 The video of the experiment process is shown below.
 
 <img src="resources/experiment-A-V2.gif" align="center" width="100%"/>
 
-**Experiment B:** Mixing physical miniature vehicles, virtual vehicles and a human-driven vehicle via a driving simulator
-
-The formation of the platoon for experiment B is shown below. SCANeR Studio is the supporting software of the driving simulator. 
-
-<img src="resources/formation-experiment-B.jpg" align="center" width="50%"/>
+**Experiment B:** Head vehicle encounters a step disturbance, simulating a sudden braking scenario.
 
 The video of the experiment process is shown below.
 
