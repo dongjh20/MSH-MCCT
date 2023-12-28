@@ -45,7 +45,7 @@ Bridged by the mixed platform, human drivers and autonomous driving algorithms c
 
 The video of the experiment process is shown below.
 
-<img src="resources/exp-sinv2.gif" align="center" width="100%"/>
+<img src="resources/exp_sinv2.gif" align="center" width="100%"/>
 
 **Experiment B:** Head vehicle encounters a step disturbance, simulating a sudden braking scenario.
 
