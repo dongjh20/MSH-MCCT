@@ -45,7 +45,7 @@ The formation of the platoon for experiment A and B is shown below.
 
 The video of the experiment process is shown below. The Video plays at 1.6x speed.
 
-<img src="resources/exp_sin.gif" align="center" width="100%"/>
+<img src="resources/exp_sin.gif" align="center" width="80%"/>
 
 **Experiment B:** Head vehicle encounters a step disturbance, simulating a sudden braking scenario.
 
