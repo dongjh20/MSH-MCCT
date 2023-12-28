@@ -24,16 +24,16 @@ An corresponding overview of the MSH-MCCT is as follows.
 
 <img src="resources/MSH-framework.jpg" align="center" width="80%"/>
 
-The methodological framework diagram for conducting multi-source human-in-the-loop CAVs testing in MSH-MCCT is as follows.
+The methodological framework diagram for conducting CAVs testing with multi-source human drivers in the loop via driving simulators in MSH-MCCT is as follows.
 
 <img src="resources/MSH-method.jpg" align="center" width="96%"/>
 
 ## Demo videos
-Two multi-source human-in-the-loop CAVs testing experiments are carried out on vehicle platooning, which is composed of different types of vehicles from different platforms in MSH-MCCT.
+Two experiments on mixed platooning with the coexistence of HDVs and CAVs is carried out to validate the effectiveness of MSH-MCCT.
 
 The detailed schematic diagram of the two experiments is illustrated below.
 
-Bridged by the mixed platform, human drivers and CAV algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
+Bridged by the mixed platform, human drivers and CAV algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and human-driven vehicles (HDVs) via multiple driving simulators could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
 
 <img src="resources/MSH-snapshot.jpg" align="center" width="80%"/>
 
@@ -43,13 +43,13 @@ The formation of the platoon for experiment A and B is shown below.
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
-The video of the experiment process is shown below. The Video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment, while the upper left corner is the image captured by roadside cameras in the physical platform.
+The video of the experiment process is shown below. The video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment, while the upper left corner is the image captured by roadside cameras in the physical platform.
 
 <img src="resources/exp_sin.gif" align="center" width="80%"/>
 
 **Experiment B:** Head vehicle encounters a braking disturbance.
 
-The video of the experiment process is shown below. The Video plays at 1.6x speed.
+The video of the experiment process is shown below. The video plays at 1.6x speed.
 
 <img src="resources/exp_brake.gif" align="center" width="80%"/>
 
