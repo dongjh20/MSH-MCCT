@@ -47,11 +47,11 @@ The video of the experiment process is shown below. The Video plays at 1.6x spee
 
 <img src="resources/exp_sin.gif" align="center" width="80%"/>
 
-**Experiment B:** Head vehicle encounters a step disturbance, simulating a sudden braking scenario.
+**Experiment B:** Head vehicle encounters a braking disturbance.
 
 The video of the experiment process is shown below.
 
-<img src="resources/experiment-B.gif" align="center" width="100%"/>
+<img src="resources/exp_brake.gif" align="center" width="80%"/>
 
 <!--还没放上去，先不放
 More longer videos can be found on [![](https://img.shields.io/badge/YouTube-SICity-FF0000?style=logo=youtube&logoColor=white)](https://github.com/cmc623/Formation-control-experiments).
@@ -67,7 +67,10 @@ More longer videos can be found on [![](https://img.shields.io/badge/YouTube-SIC
 3. Wang J, Zheng Y, Dong J, et al. Experimental Validation of DeeP-LCC for Dissipating Stop-and-Go Waves in Mixed Traffic[J]. arXiv preprint arXiv:2204.03747, 2022. [paper link](https://arxiv.org/abs/2204.03747)
 4. Dong J, Xu Q, Wang J, et al. Mixed cloud control testbed: Validating vehicle-road-cloud integration via mixed digital twin[J]. IEEE Transactions on Intelligent Vehicles, 2023. [paper link](https://arxiv.org/abs/2212.02007)
 5. Wang J, Zheng Y, Dong J, et al. Implementation and experimental validation of data-driven predictive control for dissipating stop-and-go waves in mixed traffic[J]. IEEE Internet of Things Journal, 2023. [paper link](https://arxiv.org/abs/2204.03747)
-6. 
+<!--MSH-MCCT放到arxiv上后补充下链接
+6.
+-->
+
 ## Citing MSH-MCCT
 If you refer to MSH-MCCT in your research, please cite the [paper](https://arxiv.org/abs/2212.02007). In BibTeX format:
 
