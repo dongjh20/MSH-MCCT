@@ -1,9 +1,9 @@
-# Multi Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT)
+# Multi-Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT)
 
 <!--课题组网站链接-->
 [![tsinghua-svm-thicv](https://img.shields.io/badge/Tsinghua_University-THICV-brightgreen)](https://www.labxing.com/thicv)
 
-In this project, we present demo videos for our Connected and Autonomous Vehicles (CAVs) testing platform, Multi Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
+In this project, we present demo videos for our Connected and Autonomous Vehicles (CAVs) testing platform, Multi-Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
 
 ## The notion of mixedDT
 By introducing Mixed Reality into classical DT, mixedDT bridges the physical and virtual spaces into an unified, integrated one, where physical entities coexist and interact with virtual entities via their digital counterparts. 
@@ -18,7 +18,7 @@ The schematic diagram of the proposed mixedDT is as follows.
 
 ## The structure of the MSH-MCCT
 
-Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform, multi source control input and mixed platform. 
+Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform, multi-source control input and mixed platform. 
 
 An corresponding overview of the MSH-MCCT is as follows.
 
@@ -41,7 +41,7 @@ The formation of the platoon for experiment A and B is shown below.
 
 <img src="resources/formation.jpg" align="center" width="80%"/>
 
-**Experiment A:** Head vehicle encounters a sinusoidal disturbance.
+**Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
 The video of the experiment process is shown below. The Video plays at 1.6x speed.
 
