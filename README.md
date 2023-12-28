@@ -26,7 +26,7 @@ An corresponding overview of the MSH-MCCT is as follows.
 
 The methodological framework diagram for conducting multi-source human-in-the-loop CAVs testing in MSH-MCCT is as follows.
 
-<img src="resources/MSH-method.jpg" align="center" width="80%"/>
+<img src="resources/MSH method.jpg" align="center" width="80%"/>
 
 ## Demo videos
 Two multi-source human-in-the-loop CAVs testing experiments are carried out on vehicle platooning, which is composed of different types of vehicles from different platforms in MSH-MCCT.
