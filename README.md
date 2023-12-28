@@ -49,7 +49,7 @@ The video of the experiment process is shown below. The Video plays at 1.6x spee
 
 **Experiment B:** Head vehicle encounters a braking disturbance.
 
-The video of the experiment process is shown below.
+The video of the experiment process is shown below. The Video plays at 1.6x speed.
 
 <img src="resources/exp_brake.gif" align="center" width="80%"/>
 
