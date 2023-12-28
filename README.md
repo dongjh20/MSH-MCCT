@@ -43,7 +43,7 @@ The formation of the platoon for experiment A and B is shown below.
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
-The video of the experiment process is shown below. The Video plays at 1.6x speed.
+The video of the experiment process is shown below. The Video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment, while the upper left corner is the image captured by roadside cameras in the physical platform.
 
 <img src="resources/exp_sin.gif" align="center" width="80%"/>
 
