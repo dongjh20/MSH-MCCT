@@ -26,7 +26,7 @@ An corresponding overview of the MSH-MCCT is as follows.
 
 The methodological framework diagram for conducting multi-source human-in-the-loop CAVs testing in MSH-MCCT is as follows.
 
-<img src="resources/MSH-method.jpg" align="center" width="100%"/>
+<img src="resources/MSH-method.jpg" align="center" width="80%"/>
 
 ## Demo videos
 Two multi-source human-in-the-loop CAVs testing experiments are carried out on vehicle platooning, which is composed of different types of vehicles from different platforms in MSH-MCCT.
@@ -35,15 +35,15 @@ The detailed schematic diagram of the two experiments is illustrated below.
 
 Bridged by the mixed platform, human drivers and autonomous driving algorithms could control both physical and virtual vehicles. Therefore, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. 
 
-<img src="resources/MSH-snapshot.jpg" align="center" width="100%"/>
+<img src="resources/MSH-snapshot.jpg" align="center" width="80%"/>
 
 The formation of the platoon for experiment A and B is shown below.
 
-<img src="resources/formation.jpg" align="center" width="100%"/>
+<img src="resources/formation.jpg" align="center" width="80%"/>
 
 **Experiment A:** Head vehicle encounters a sinusoidal disturbance.
 
-The video of the experiment process is shown below.
+The video of the experiment process is shown below. The Video plays at 1.6x speed.
 
 <img src="resources/exp_sin.gif" align="center" width="80%"/>
 
@@ -68,7 +68,7 @@ More longer videos can be found on [![](https://img.shields.io/badge/YouTube-SIC
 4. Dong J, Xu Q, Wang J, et al. Mixed cloud control testbed: Validating vehicle-road-cloud integration via mixed digital twin[J]. IEEE Transactions on Intelligent Vehicles, 2023. [paper link](https://arxiv.org/abs/2212.02007)
 5. Wang J, Zheng Y, Dong J, et al. Implementation and experimental validation of data-driven predictive control for dissipating stop-and-go waves in mixed traffic[J]. IEEE Internet of Things Journal, 2023. [paper link](https://arxiv.org/abs/2204.03747)
 6. 
-## Citing MCCT
+## Citing MSH-MCCT
 If you refer to MSH-MCCT in your research, please cite the [paper](https://arxiv.org/abs/2212.02007). In BibTeX format:
 
 ```bibtex
