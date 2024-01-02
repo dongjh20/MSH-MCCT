@@ -6,7 +6,7 @@
 In this project, we present demo videos for our Connected and Autonomous Vehicles (CAVs) testing platform, Multi-Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
 
 ## The notion of mixedDT
-By introducing Mixed Reality into classical DT, mixedDT bridges the physical and virtual spaces into an unified, integrated one, where physical entities coexist and interact with virtual entities via their digital counterparts. 
+By introducing Mixed Reality into classical DT, mixedDT bridges the physical and virtual spaces into a unified, integrated one, where physical entities coexist and interact with virtual entities via their digital counterparts. 
 
 The schematic diagram of the classical DT is as follows.
 
@@ -16,15 +16,15 @@ The schematic diagram of the proposed mixedDT is as follows.
 
 <img src="resources/mdt-framework.jpg" align="center" width="80%"/>
 
-## The structure of the MSH-MCCT
+## Platform structure of MSH-MCCT
 
-Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform, multi-source control input and mixed platform. 
+Under the framework of mixedDT, MSH-MCCT consists of physical, virtual and mixed platforms, and multi-source control input. 
 
-An corresponding overview of the MSH-MCCT is as follows.
+An corresponding overview of MSH-MCCT is as follows.
 
 <img src="resources/MSH-framework.jpg" align="center" width="80%"/>
 
-The methodological framework diagram for conducting CAVs testing with multi-source human drivers in the loop via driving simulators in MSH-MCCT is as follows.
+The methodological framework diagram for conducting CAVs testing with multi-source human drivers in the loop via various-fidelity driving simulators in MSH-MCCT is as follows.
 
 <img src="resources/MSH-method.jpg" align="center" width="96%"/>
 
@@ -43,7 +43,7 @@ The formation of the platoon for experiment A and B is shown below.
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
-The video of the experiment process is shown below. The video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment. The upper left corner is the image captured by roadside cameras in the physical platform, and the numbers next to the physical vehicles are merely vehicle IDs for identification, not the vehicle's sequential order in the platoon shown above.
+The video of the experiment process is shown below. The video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment. The upper left corner is the image captured by roadside cameras in the physical platform, and the numbers next to the physical vehicles are merely vehicle IDs for identification, not the vehicles' sequential order in the platoon shown above.
 
 <img src="resources/exp_sin.gif" align="center" width="80%"/>
 
@@ -80,6 +80,9 @@ If you refer to MSH-MCCT in your research, please cite the [paper](https://arxiv
   author={Dong, Jianghong and Xu, Qing and Wang, Jiawei and Yang, Chunying and Cai, Mengchi and Chen, Chaoyi and Liu, Yu and Wang, Jianqiang and Li, Keqiang},
   journal={IEEE Transactions on Intelligent Vehicles},
   year={2023},
+  volume={8},
+  number={4},
+  pages={2723-2736},
   publisher={IEEE}
 }
 ```
