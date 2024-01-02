@@ -51,7 +51,7 @@ The video of the experiment process is shown below. The video plays at 1.6x spee
 
 The video of the experiment process is shown below. The video plays at 1.6x speed.
 
-<img src="resources/exp_brake.gif" align="center" width="80%"/>
+<img src="resources/exp_braking.gif" align="center" width="80%"/>
 
 <!--还没放上去，先不放
 More longer videos can be found on [![](https://img.shields.io/badge/YouTube-SICity-FF0000?style=logo=youtube&logoColor=white)](https://github.com/cmc623/Formation-control-experiments).
