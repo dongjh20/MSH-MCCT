@@ -31,7 +31,7 @@ The detailed mode of operation is shown below.
 | 5 | HDV | Virtual vehicle | Human via G29 simulator | Virtual field-of-view <br/> from the Unity virtual environment |
 | 6 | CAV | Virtual vehicle | CACC controller | N/A |
 | 7 | CAV | Virtual vehicle | CACC controller | N/A |
-| 8 | HDV | Virtual vehicle | Human via InnoSimulation simulator | Virtual field-of-view <br/> from the InnoSimulation virtual environment |
+| 8 | HDV | Virtual vehicle | Human via InnoSimulation simulator | Virtual field-of-view from the InnoSimulation virtual environment |
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
