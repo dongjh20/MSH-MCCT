@@ -3,14 +3,14 @@
 <!--课题组网站链接-->
 [![tsinghua-svm-thicv](https://img.shields.io/badge/Tsinghua_University-THICV-brightgreen)](https://www.labxing.com/thicv)
 
-In this project, we present demo videos for our Connected and Autonomous Vehicles (CAVs) testing platform, Multi-Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
+In this project, we present demo videos for our CAVs (Connected and Autonomous Vehicles) testing platform, Multi-Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
 
 An corresponding overview of MSH-MCCT is as follows.
 
 <img src="resources/MSH-framework.jpg" align="center" width="80%"/>
 
 ## Demo videos
-Two experiments on mixed platooning with the coexistence of HDVs and CAVs is carried out to validate the effectiveness of MSH-MCCT.
+Two experiments on mixed platooning with the coexistence of HDVs (human-driven vehicles) and CAVs is carried out to validate the effectiveness of MSH-MCCT.
 
 The detailed schematic diagram of the two experiments is illustrated below.
 
@@ -19,11 +19,10 @@ The detailed schematic diagram of the two experiments is illustrated below.
 The formation of the platoon for experiment A and B is shown below.
 
 <img src="resources/formation.jpg" align="center" width="80%"/>
- &  & Simulator Type & Field-of-View
-| ID | Type | 居中对齐 |
-| :-----| ----: | :----: |
-| 单元格 | 单元格 | 单元格 |
-| 单元格 | 单元格 | 单元格 |
+| ID | Type | Entity | Control input | Field of view|
+| :----:| :----: | :----: |
+| 1 | CAV | Physical vehicle | CACC controller | \ |
+| 2 | HDV | Physical vehicle | Human via G29simulator | Physical field-of-view from the physical sand table |
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
