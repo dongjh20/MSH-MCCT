@@ -27,8 +27,8 @@ The detailed mode of operation is shown below.
 | 1 | CAV | Physical vehicle | CACC controller | N/A |
 | 2 | HDV | Physical vehicle | Human via G29 simulator | Physical field-of-view from the physical sand table |
 | 3 | CAV | Virtual vehicle | CACC controller | N/A |
-| 4 | HDV | Physical vehicle | Human via G29 simulator | Virtual field-of-view <br/> from the Unity virtual environment |
-| 5 | HDV | Virtual vehicle | Human via G29 simulator | Virtual field-of-view <br/> from the Unity virtual environment |
+| 4 | HDV | Physical vehicle | Human via G29 simulator | Virtual field-of-view of the virtual twin vehicle from the Unity virtual environment |
+| 5 | HDV | Virtual vehicle | Human via G29 simulator | Virtual field-of-view from the Unity virtual environment |
 | 6 | CAV | Virtual vehicle | CACC controller | N/A |
 | 7 | CAV | Virtual vehicle | CACC controller | N/A |
 | 8 | HDV | Virtual vehicle | Human via InnoSimulation simulator | Virtual field-of-view from the InnoSimulation virtual environment |
