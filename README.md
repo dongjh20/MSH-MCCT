@@ -19,6 +19,11 @@ The detailed schematic diagram of the two experiments is illustrated below.
 The formation of the platoon for experiment A and B is shown below.
 
 <img src="resources/formation.jpg" align="center" width="80%"/>
+ &  & Simulator Type & Field-of-View
+| ID | Type | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
