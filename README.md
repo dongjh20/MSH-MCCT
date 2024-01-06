@@ -20,12 +20,18 @@ The formation of the platoon for experiment A and B is shown below.
 
 <img src="resources/formation.jpg" align="center" width="80%"/>
 
-The formation of the platoon for experiment A and B is shown below.
+The detailed mode of operation is shown below.
 
-| ID | Type | Entity | Control input | Field of view|
+| ID | Type | Entity | Control input | Field of view |
 | :---:| :---: | :---: | :---: | :---: |
-| 1 | CAV | Physical vehicle | CACC controller | a |
-| 2 | HDV | Physical vehicle | Human via G29simulator | Physical field-of-view from the physical sand table |
+| 1 | CAV | Physical vehicle | CACC controller | N/A |
+| 2 | HDV | Physical vehicle | Human via G29 simulator | Physical field-of-view from the physical sand table |
+| 3 | CAV | Virtual vehicle | CACC controller | N/A |
+| 4 | HDV | Physical vehicle | Human via G29 simulator | Virtual field-of-view <br/> from the Unity virtual environment |
+| 5 | HDV | Virtual vehicle | Human via G29 simulator | Virtual field-of-view <br/> from the Unity virtual environment |
+| 6 | CAV | Virtual vehicle | CACC controller | N/A |
+| 7 | CAV | Virtual vehicle | CACC controller | N/A |
+| 8 | HDV | Virtual vehicle | Human via InnoSimulation simulator | Virtual field-of-view <br/> from the InnoSimulation virtual environment |
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
 
