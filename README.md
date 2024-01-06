@@ -20,8 +20,8 @@ The formation of the platoon for experiment A and B is shown below.
 
 <img src="resources/formation.jpg" align="center" width="80%"/>
 | ID | Type | Entity | Control input | Field of view|
-| :----:| :---------------: | :-----------: | :-----------: | :-----------: |
-| 1 | CAV | Physical vehicle | CACC controller | \ |
+| :---:| :---: | :---: | :---: | :---: |
+| 1 | CAV | Physical vehicle | CACC controller | a |
 | 2 | HDV | Physical vehicle | Human via G29simulator | Physical field-of-view from the physical sand table |
 
 **Experiment A:** Head vehicle encounters a half-sinusoidal disturbance.
