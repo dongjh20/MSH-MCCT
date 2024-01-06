@@ -5,14 +5,14 @@
 
 In this project, we present demo videos for our CAVs (Connected and Autonomous Vehicles) testing platform, Multi-Source Human-in-the-loop Mixed Cloud Control Testbed (MSH-MCCT), developed based on a new notion of Mixed Digital Twin (mixedDT). 
 
-An corresponding overview of MSH-MCCT is as follows.
+A corresponding overview of MSH-MCCT is as follows.
 
 <img src="resources/MSH-framework.jpg" align="center" width="80%"/>
 
 ## Demo videos
 Two experiments on mixed platooning with the coexistence of HDVs (human-driven vehicles) and CAVs is carried out to validate the effectiveness of MSH-MCCT.
 
-The detailed schematic diagram of the two experiments is illustrated below.
+The detailed schematic of the two experiments is illustrated below.
 
 <img src="resources/MSH-snapshot.jpg" align="center" width="80%"/>
 
@@ -20,7 +20,7 @@ The formation of the platoon for experiment A and B is shown below.
 
 <img src="resources/formation.jpg" align="center" width="80%"/>
 
-The detailed mode of operation is shown below.
+The detailed mode of operation is presented below.
 
 | ID | Type | Entity | Control input | Field of view |
 | :---:| :---: | :---: | :---: | :---: |
