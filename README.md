@@ -37,7 +37,7 @@ The detailed mode of operation is presented below.
 
 The video of the experiment process is shown below. The video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment. The upper left corner is the image captured by roadside cameras in the physical platform, and the numbers next to the physical vehicles are merely vehicle IDs for identification, not the vehicles' sequential order in the platoon shown above.
 
-<img src="resources/exp_sin.gif" align="center" width="80%"/>
+<img src="resources/exp_sin_V2.gif" align="center" width="80%"/>
 
 **Experiment B:** Head vehicle encounters a braking disturbance.
 
