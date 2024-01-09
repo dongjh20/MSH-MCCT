@@ -37,13 +37,13 @@ The detailed mode of operation is presented below.
 
 The video of the experiment process is shown below. The video plays at 1.6x speed. The upper right corner is the visualization of the platoon in the Unity virtual environment. The upper left corner is the image captured by roadside cameras in the physical platform, and the numbers next to the physical vehicles are merely vehicle IDs for identification, not the vehicles' sequential order in the platoon shown above.
 
-<img src="resources/exp_sin_V2.gif" align="center" width="80%"/>
+<img src="resources/exp_sin_V3.gif" align="center" width="80%"/>
 
 **Experiment B:** Head vehicle encounters a braking disturbance.
 
 The video of the experiment process is shown below. The video plays at 1.6x speed.
 
-<img src="resources/exp_braking.gif" align="center" width="80%"/>
+<img src="resources/exp_braking_V2.gif" align="center" width="80%"/>
 
 <!--还没放上去，先不放
 More longer videos can be found on [![](https://img.shields.io/badge/YouTube-SICity-FF0000?style=logo=youtube&logoColor=white)](https://github.com/cmc623/Formation-control-experiments).
