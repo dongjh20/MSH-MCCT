@@ -57,6 +57,9 @@ More longer videos can be found on [![](https://img.shields.io/badge/YouTube-SIC
 6.
 -->
 
+> [!TIP]
+> MSH-MCCT is developed based on our preliminary platform, called [Mixed Cloud Control Testbed (MCCT)](https://arxiv.org/abs/2212.02007), where only one single HDV controlled by human is integrated into the DT environment. In MSH-MCCT, we extend this platform to support multi-source human-in-the-loop experiments.
+
 ## Citing MSH-MCCT
 If you refer to MSH-MCCT in your research, please cite the [paper](https://arxiv.org/abs/2212.02007). In BibTeX format:
 
