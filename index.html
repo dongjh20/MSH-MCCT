@@ -140,13 +140,34 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <h2 class="title is-3">Experiment A: Head vehicle suffers a half-sinusoidal perturbation.</h2>
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
         <source src="https://github.com/HONGcalmJIN/MSH-MCCT-assets/assets/52435441/b6327d2a-a5fc-4b0b-9d10-64a371ae9aa8"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        In Experiment A, the CACC controllers enable the CAVs to dampen the velocity fluctuation of the head vehicle, preventing disturbances 
+        from amplifying within the platoon, while the human drivers are amplifying these fluctuations, especially the last one.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Experiment B: Head vehicle suffers a braking  perturbation.</h2>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="https://github.com/HONGcalmJIN/MSH-MCCT-assets/assets/52435441/512f14c2-266f-41c9-a625-7c6e5d0ed238"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      In Experiment B, the CAVs distributed in the platoon mitigate the amplification of fluctuations caused by the head vehicle's sudden braking.
+      In particular, since all the collisions involve at least one virtual vehicle, no actual damage is incurred by any vehicle.
       </h2>
     </div>
   </div>
@@ -161,8 +182,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            In the near future, connected and autonomous vehicles (CAVs) have to interact with multiple human-driven vehicles (HDVs) in 
+            mixed traffic environments. To capture the complex multi-interactivity nature between various CAVs and HDVs, this paper 
+            introduces a CAV testing platform MSH-MCCT (Multi-Source Human-in-the-Loop Mixed Cloud Control Testbed). 
+            This platform is developed based on a notion of Mixed Digital Twin (mixedDT), which extends the Digital Twin concept 
+            via introducing Mixed Reality. Precisely, physical entities could coexist and interact with virtual entities indirectly via 
+            their digital counterparts. Under the framework of mixedDT, MSH-MCCT consists of physical, virtual, and mixed platforms, 
+            and multi-source control input. Bridged by the mixed platform, human drivers and CAV algorithms could control both physical 
+            and virtual vehicles. Consequently, physical and virtual CAVs and HDVs could operate together within the same integrated environment, 
+            greatly enhancing the flexibility and scalability of experiments. Validations on vehicle platooning demonstrate the capability of 
+            the platform to conduct CAVs testing with multi-source real human drivers in the loop via various-fidelity driving simulators.          </p>
         </div>
       </div>
     </div>
@@ -173,37 +202,23 @@
 
 <!-- Image carousel -->
 <section class="hero is-small">
-  <div class="hero-body">
+  <div class="hero-body",style="text-align: center;">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/MSH-snapshotV19.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The detailed schematic of the two experiments.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/formation.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          The detailed mode of operation.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -213,88 +228,15 @@
 
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
+<!--BibTex citation 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
 </section>
-<!--End BibTex citation -->
+--End BibTex citation -->
 
 
   <footer class="footer">
