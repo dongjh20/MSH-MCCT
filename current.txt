@@ -139,7 +139,7 @@ urlcolor=blue]{hyperref}
 % Do not put math or special symbols in the title.
 %\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
 \title{%\LARGE \bf
-{Multi-Source Human-in-the-Loop Experimental Platform for Connected and Autonomous Vehicles \\via Mixed Digital Twin}
+Multi-Source Human-in-the-Loop Experimental Platform for Connected and Autonomous Vehicles \\ via Mixed Digital Twin
 
 }
 
@@ -149,7 +149,7 @@ urlcolor=blue]{hyperref}
 \author{Jianghong Dong, Jiawei Wang, Chunying Yang, Mengchi Cai, Chaoyi Chen,
 \\Qing Xu, Jianqiang Wang, and Keqiang Li % <-this % stops a space
 	\thanks{This work is supported by National Key R\&D Program of China with 2021YFB1600402, National Natural Science Foundation of China with the Key Project (52131201) and Tsinghua University-Didi Joint Research Center for Future Mobility. Corresponding author: Jiawei Wang.}%and K.~Li <-this % stops a space
-	\thanks{Jianghong Dong, Chunying Yang, Mengchi Cai, Chaoyi Chen, Qing Xu, Jianqiang Wang and Keqiang Li are with the School of Vehicle and Mobility, Tsinghua University, Beijing, China, and with Tsinghua University-Didi Joint Research Center for Future Mobility, Beijing 100084, China. (djh20@mails.tsinghua.edu.cn, ycyacademic@gmail.com, \{caimengchi,chency2023,qingxu,wjqlws,likq\}@tsinghua.edu.cn) }
+	\thanks{Jianghong Dong, Chunying Yang, Mengchi Cai, Chaoyi Chen, Qing Xu, Jianqiang Wang and Keqiang Li are with the School of Vehicle and Mobility, Tsinghua University, Beijing, China, and with Tsinghua University-Didi Joint Research Center for Future Mobility, Beijing 100084, China. (\{djh20,cmc18,chency19\}@mails.tsinghua.edu.cn,  \{qingxu,wjqlws,likq\}@tsinghua.edu.cn) }
  \thanks{Jiawei Wang was with the School of Vehicle and Mobility, Tsinghua University, Beijing 100084, China. He is now with the Department of Civil and Environmental Engineering, University of Michigan, Ann Arbor, MI 48109, USA. (jiawe@umich.edu)}
 
  %
@@ -217,7 +217,7 @@ urlcolor=blue]{hyperref}
 % in the abstract or keywords.
 \begin{abstract}
 	
-In the near future, connected and autonomous vehicles (CAVs) have to interact with multiple human-driven vehicles (HDVs) in mixed traffic environments. To capture the complex multi-interactivity nature between various CAVs and HDVs, this paper introduces a CAV testing platform MSH-MCCT (Multi-Source Human-in-the-Loop Mixed Cloud Control Testbed). This platform is developed based on a notion of Mixed Digital Twin (mixedDT), which extends the Digital Twin concept via introducing Mixed Reality. Precisely, physical entities could coexist and interact with virtual entities indirectly via their digital counterparts. Under the framework of mixedDT, MSH-MCCT consists of physical, virtual, and mixed platforms, and multi-source control input. Bridged by the mixed platform, human drivers and CAV algorithms could control both physical and virtual vehicles. Consequently, physical and virtual CAVs and HDVs could operate together within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. Validations on vehicle platooning demonstrate the capability of the platform to conduct CAVs testing with multi-source real human drivers in the loop via various-fidelity driving simulators. 
+In the near future, connected and autonomous vehicles (CAVs) have to interact with multiple human-driven vehicles (HDVs) in mixed traffic environments. To capture the complex multi-interactivity nature between various CAVs and HDVs, this paper introduces a CAV testing platform MSH-MCCT (Multi-Source Human-in-the-Loop Mixed Cloud Control Testbed). This platform is developed based on a notion of Mixed Digital Twin (mixedDT), which extends the Digital Twin concept via introducing Mixed Reality. Precisely, physical entities could coexist and interact with virtual entities indirectly via their digital counterparts. Under the framework of mixedDT, MSH-MCCT contains physical and virtual platform, multi-source control input and mixed platform. Bridged by the mixed platform, human drivers and CAV algorithms could control both physical and virtual vehicles. Consequently, physical and virtual CAVs and HDVs could operate together within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. Validations on vehicle platooning demonstrate the capability of our platform to conduct CAVs testing with multi-source human in the loop via different driving simulators. 
 %  words	
 \end{abstract}
 
@@ -229,27 +229,28 @@ In the near future, connected and autonomous vehicles (CAVs) have to interact wi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-\IEEEPARstart{T}{he} rapidly advancing and evolving technology of Connected and Autonomous Vehicles (CAVs) promises to enhance travel safety, traffic efficiency, and environmental friendliness of transportation systems~\cite{liao2023driver}. To validate CAVs' potential before their practical deployment, they must undergo rigorous and comprehensive testing and evaluation~\cite{feng2023dense,feng2021intelligent}. Particularly, since achieving full automation and networking will take a considerable amount of time, CAVs have to interact with diverse human-driven vehicles (HDVs) in a foreseeable future~\cite{wang2020controllability,zheng2020smoothing,ansar2023behavioural}. Therefore,  the upcoming traffic system is essentially a human-in-the-loop mixed-autonomy system, which makes it crucial to conduct human-in-the-loop testing and evaluation for CAVs in mixed traffic, where multiple multi-source HDVs coexist~\cite{wang2023implementation,yue2022effects,wang2021digital}.
+\IEEEPARstart{T}{he}
+rapidly advancing and evolving technology of Connected and Autonomous Vehicles (CAVs) promises to enhance travel safety, traffic efficiency, and environmental friendliness of transportation systems~\cite{liao2023driver}. To validate CAVs' potential before their practical deployment, they must undergo rigorous and comprehensive testing and evaluation~\cite{feng2023dense,feng2021intelligent}. Particularly, since achieving full automation and networking will take a considerable amount of time, CAVs have to interact with diverse human-driven vehicles (HDVs) in a foreseeable future~\cite{wang2020controllability,zheng2020smoothing}. Therefore,  the upcoming traffic system is essentially a human-in-the-loop mixed-autonomy system, which makes it crucial to conduct human-in-the-loop testing and evaluation for CAVs in mixed traffic, where multiple multi-source HDVs coexist~\cite{wang2023implementation,yue2022effects,wang2021digital}.
 
-One straightforward approach is real-world experiments. Despite its high potential in obtaining authentic driving behavior of human drivers~\cite{maag2012studying}, this approach generally takes substantial labor and material costs, and is extremely time- and space-inefficient~\cite{liao2021cooperative}. Moreover, experiments involving safety-critical scenarios are unsuitable to be carried out in the real world due to safety concerns. Alternatively, to incorporate human driver factors into CAVs testing, existing studies mostly adopt concise human driver models to capture HDVs' behaviors~\cite{chen2021mixed,wu2021flow,wang2022make,rohaert2023traffic}, such as intelligent driver model (IDM)~\cite{kesting2010enhanced} for car-following maneuvers, and Gipps’s lane changing decision model~\cite{gipps1986model} for lane-changing maneuvers. These models are typically derived from extensive datasets of human driver behaviors~\cite{soldevila2021car}, and can be roughly categorized into generic models~\cite{kesting2010enhanced} and personalized ones~\cite{hu2022review}. In practice, however, human driver behaviors are highly uncertain and nonlinear, and are influenced by numerous factors, making it quite challenging to be accurately depicted via specific models~\cite{yan2023learning}. 
+One straightforward approach is real-world experiments. Despite its high potential in obtaining authentic driving behavior of human drivers~\cite{maag2012studying}, this approach usually takes substantial labor and material costs, and is extremely time- and space-inefficient~\cite{liao2021cooperative}. Moreover, experiments involving safety-critical situations are unsuitable to be carried out in the real world due to safety concerns. Alternatively, to incorporate human driver factors into CAVs testing, existing studies mostly adopt concise human driver models to capture HDVs' behaviors~\cite{chen2021mixed,wu2021flow,wang2022make}, such as IDM~\cite{kesting2010enhanced} and OVM~\cite{bando1995dynamical} for car-following maneuvers, and Gipps’s lane changing decision model~\cite{gipps1986model} and MOBIL~\cite{kesting2007general} for lane-changing maneuvers. These models are typically derived from extensive datasets of human driver behaviors, and can be roughly categorized into generic models~\cite{kesting2010enhanced} and personalized ones~\cite{hu2022review}. In practice, however, human driver behaviors are highly uncertain and nonlinear, and are influenced by numerous factors, making it quite challenging to be accurately depicted via specific models~\cite{yan2023learning}. 
 
 \subsection{Human-in-the-Loop Experiments and Digital Twin}
 
-Human-in-the-loop experiments via driving simulators bridge the gap between field experiments and simulated driver behavior models. 
+Human-in-the-loop experiments via driving simulators bridge the gap between field experiments and simulated behavior models. 
 Typical simulator hardware ranges from high-fidelity commercial products~\cite{warner2017simulator} to simplified configurations with computer screens, steering wheels and pedals~\cite{wang2021digital}. 
-The driving environment is commonly provided by the software of driving simulators~\cite{ansar2023driver}, including commercial program such as SILAB~\cite{maag2012studying} and open-source ones such as Unity~\cite{wang2021digital2} and CARLA~\cite{wang2023towards}. 
-In most cases, the driving environment is a virtual one, which is highly configurable and reproducible~\cite{abdelgawad2017networked}. 
-Since this approach is affordable and easily implementable, and its results is empirically proved to be valid~\cite{abdelgawad2017networked}, it has been recognized as a not only safe and efficient, but also effective method to capture and evaluate driver behaviors in existing studies~\cite{wang2023towards}. 
-Indeed, human-in-the-loop experiments via driving simulators have already been widely adopted for data collection to establish driver behavior models~\cite{hu2022review,abdelgawad2017networked,negash2023driver}.
+The driving environment is commonly provided by the software of driving simulators~\cite{lindner2022coupled}, including commercial program such as SILAB~\cite{maag2012studying} and open-source ones such as Unity~\cite{gajananan2013experimental} and CARLA~\cite{wang2022investigating}. 
+Typically, the driving environment is a virtual one, which is configurable and reproducible~\cite{abdelgawad2017networked}. 
+Since this approach is affordable, easily implementable and its results is empirically proved to be valid~\cite{swake2013driver}, it has been recognized as a not only safe and efficient, but also effective method to capture and evaluate driver behaviors in existing studies~\cite{wang2023towards}. 
+Indeed, human-in-the-loop experiments via driving simulators have already been widely adopted for data collection to establish driver behavior models~\cite{swake2013driver,negash2023driver,hu2022review}.
 
-Recently, this approach has also been utilized for human-in-the-loop testing and validation for CAV technologies in mixed traffic environments~\cite{wang2021digital,dong2023mixed}. 
-Precisely, human drivers operate virtual vehicles in a virtual environment via driving simulators, while the CAVs are controlled by specific CAV algorithms and interact with the HDVs in the same virtual environment. 
-Most existing research considers a simplified setup, where only one single HDV is controlled by a human driver via a driving simulator, and the other traffic participants are programmed~\cite{wang2021digital,warner2017simulator,wang2021digital2}. 
+Recently, this approach has also been utilized for human-in-the-loop testing and validation for CAV technologies in mixed traffic environments~\cite{dong2023mixed,wang2021digital}. 
+Precisely, human drivers manipulate virtual vehicles in the virtual environment via driving simulators, while the CAVs are operated by specific CAV algorithms and interact with the HDVs in the same virtual environment. 
+Most existing research considers a simplified setup, where only one single HDV is controlled by a human driver via a driving simulator, and the other traffic participants are programmed~\cite{wang2021digital,wang2021digital2,warner2017simulator,wang2020driver}. 
 Very recently, to better approximate and investigate the complex multi-interactivity nature associated with the advanced automotive technologies and future traffic environments~\cite{abdelgawad2017networked}, an experimental platform is constructed in~\cite{yue2022effects} with multiple HDVs in the loop, where the effects of CAV's merging maneuvers on surrounding HDVs' behaviors are evaluated.
-Specifically, multiple driving simulators are connected together, and thus drivers can interact simultaneously in the same virtual driving environment, where the CAV is controlled by their algorithms. 
+Specifically, multiple driving simulators are connected together, and thus drivers can interact simultaneously in the same virtual driving environment, where the CAVs are controlled by their algorithms. 
 Indeed, this setup is typical in multi-driver driving simulation~\cite{maag2012studying}, also known as networked driving simulation~\cite{abdelgawad2017networked}, which aims to explore the interactions between multiple road users in real-world traffic. 
 
-However, the method in~\cite{yue2022effects,maag2012studying,abdelgawad2017networked} is constrained by the inherent limitations of the underlying virtual simulation environment, where many real-world factors cannot be accurately replicated, such as vehicle dynamics, uncertainties in sensor measurement, and delays in communication and computation processes. 
+However, the method in~\cite{yue2022effects,maag2012studying,abdelgawad2017networked} is constrained by the inherent limitations of the underlying virtual simulation environment, where many real-world factors cannot be accurately replicated, such as vehicle dynamics, uncertainties in sensor measurement, and delays in communication and computation process. 
 How to integrate physical vehicles into the original virtual environments remains an open question for conducting CAVs testing with multiple human drivers in the loop via driving simulators. 
 
 
@@ -264,14 +265,14 @@ How to integrate physical vehicles into the original virtual environments remain
 	{\includegraphics[scale=0.55]{Figures/mdt-framework.pdf}
 		\label{fig.mdt-architecture}}
 	\vspace{-1mm}
-	\caption{Schematics for classical DT and mixedDT. (a) In classical DT, the virtual space is typically a digital replica of the physical space. (b) In mixedDT, the virtual space and the physical space are integrated into the mixed space, where physical and virtual entities could coexist and interact with each other.
+	\caption{Schematics for classical DT and mixedDT. (a) In classical DT, the virtual space is a digital replica of the physical space. (b) In mixedDT, the virtual space and the physical space are integrated into the mixed space, where physical and virtual entities could coexist and interact with each other.
 	}
 	\label{fig.architecture}
 \end{figure}
 
-To tackle this problem, Digital Twin (DT) provides a potential tool to connect the physical and virtual entities~\cite{glaessgen2012digital}. As shown in Fig.~\ref{fig.dt-architecture}, DT comprises two main parts: physical entities in the physical space, and the digital counterparts of the physical entities (named as twin entities) in the virtual space~\cite{grieves2014digital}. 
+To tackle this problem, Digital Twin (DT) provides a potential tool to connect the physical and virtual environments~\cite{glaessgen2012digital}. As shown in Fig.~\ref{fig.dt-architecture}, DT is composed of two main parts: physical entities in the physical space, and the digital counterparts of the physical entities (named as twin entities) in the virtual space~\cite{grieves2014digital}. 
 Through synchronization and interaction between real-world entities and their virtual counterparts, DT promises to facilitate CAVs testing via this bio-connection~\cite{liao2021cooperative,hu2022review}. 
-Recently, some CAVs testing experiments with human in the loop  have been conducted in typical applications based on DT, including adaptive cruise control~\cite{wang2021digital2}, cooperative ramp merging~\cite{liao2021cooperative} and intersection control~\cite{wang2021digital}. However, only one single HDV controlled by a real human driver is integrated into the DT environment in these research, which cannot reflect the complex multi-interactivity nature between multiple CAVs and multiple HDVs in future traffic environments. 
+Recently, some CAVs testing experiments with human in the loop  have been conducted in typical applications based on DT, including adaptive cruise control~\cite{wang2021digital2}, cooperative ramp merging~\cite{liao2021cooperative} and intersection control~\cite{wang2021digital}. However, only one single HDV controlled by the real human driver is integrated into the DT environment in these research, which cannot reflect the complex multi-interactivity nature between multiple CAVs and multiple HDVs in future traffic environments. 
 Moreover, due to the natural limitations of classical DT technologies in the virtuality-reality connections, where virtuality is commonly a digital replica of reality, the potential of the virtual entities in CAVs testing has not been fully explored in previous work. To address these issues, this paper aims to establish a more flexible and scalable platform for CAVs testing with multi-source real human drivers in the loop based on a very recent notion, called Mixed Digital Twin (mixedDT)~\cite{dong2023mixed}.
 
 
@@ -280,19 +281,19 @@ Moreover, due to the natural limitations of classical DT technologies in the vir
 As an extension of the classical DT concept~\cite{glaessgen2012digital,grieves2017digital}, mixedDT consists of three spaces: physical space, virtual space, and mixed space, as illustrated in Fig.~\ref{fig.mdt-architecture}. The meanings of physical space and virtual space are consistent with the classical DT, while the newly added mixed space is an integration of physical and virtual spaces, where physical and virtual entities coexist and interact in real time. 
 Particularly, the virtual entity in mixedDT exists independently in the virtual space, rather than a digital replica or counterpart of the physical entity, \ie, twin entity in classical DT. Therefore, virtual entities could coexist and interact with physical entities in the mixed space, contributing to enhanced flexibility and scalability. Based on this new notion, our previous work establishes a preliminary platform, called Mixed Cloud Control Testbed (MCCT)~\cite{dong2023mixed}. 
 MCCT bridges multiple diverse entities from the vehicle-road-cloud integrated system into a comprehensive experimental platform via mixedDT. 
-However, still, only one single HDV controlled by human is integrated into the DT environment. 
-Therefore, in this work, we extend this platform to support multi-source human-in-the-loop experiments, and thus the complex interactions between multiple CAVs and HDVs in upcoming traffic environments can be captured and investigated. 
+However, still, only single HDV controlled by human is integrated into the DT environment. 
+Therefore, in this work, we extend this platform to support multi-source human-in-the-loop experiments, and thus the complex interactions between multiple CAVs and HDVs in traffic environments can be captured and investigated. 
 
-A related concept with mixedDT is Mixed Reality (MR), which is defined as a class of simulators combining both physical and virtual objects to create a hybrid of the physical and virtual spaces~\cite{rokhsaritalemi2020review}. MR evolves from multiple concepts including Augmented Reality and Augmented Virtuality. It aims to construct the “Reality-Virtuality Continuum” and consequently provides consumers a more immersive and interactive environment~\cite{flavian2019impact}. 
-Recently, MR has been applied to CAVs testing and evaluation to extend the existence of interactive objects in not only virtual testing environments~\cite{feng2023effect} but also physical testing environments~\cite{feng2020safety}. To address the practical testing demands of CAVs, mixedDT introduces the idea of MR into classical DT by establishing a mixed space where both physical and virtual entities could coexist and interact with each other. Note that the physical space is a real-world testing environment, while the virtual space is highly configurable and reproducible, which is particularly applicable in safety-critical situations. The mixed space bridges the physical and virtual spaces to operate together, and thus provides more potential applications, enhancing the flexibility and scalability of DT's applications in CAVs testing. 
+A related concept with mixedDT is Mixed Reality (MR), which is defined as a type of simulators combining both virtual and physical objects to create a hybrid of the virtual and physical spaces~\cite{flavian2019impact}. MR evolves from multiple concepts including Augmented Reality and Augmented Virtuality. It aims to construct the “Reality-Virtuality Continuum” and consequently provides consumers a more immersive and interactive environment~\cite{flavian2019impact}. 
+Recently, MR has been applied to CAVs testing and evaluation to extend the existence of interactive objects in not only virtual testing environments~\cite{serrano2023digital} but also physical testing environments~\cite{feng2020safety}. To address the practical testing demands of CAVs, mixedDT introduces the idea of MR into classical DT by establishing a mixed space where both physical and virtual entities could coexist and interact with each other. Note that the physical space is a real-world testing environment, while the virtual space is entirely configurable and reproducible, which is particularly applicable in safety-critical situations. The mixed space bridges the physical and virtual spaces to operate together, and thus provides more potential applications, enhancing the flexibility and scalability of DT's applications in CAVs testing. 
 
 
 \begin{figure}[t]
 	%\vspace{-3mm}
 	\centering
-	\includegraphics[scale=0.9]{Figures/MSH-frameworkV23.jpg}
+	\includegraphics[scale=0.9]{Figures/MSH-frameworkV21.png}
 	%\vspace{-2mm}
-	\caption{Schematic of MSH-MCCT. In the mixed platform, the physical vehicles in the physical platform (outlined in yellow), the virtual vehicles in the virtual platform (outlined in cyan) and the virtual vehicle in the driving environment of a driving simulator (outlined in red) coexist and interact with each other. The multi-source control input includes human drivers via various-fidelity levels of driving simulators and diverse CAV algorithms. The visualization of the mixed platform shown in (c) is provided by a MR device. The demonstration videos can be found in \url{https://dongjh20.github.io/MSH-MCCT}. }
+	\caption{Schematic of MSH-MCCT. In the mixed platform, the physical vehicles in the physical platform (colored in yellow), the virtual vehicles in the virtual platform (colored in cyan) and the virtual vehicle in the driving environment of a driving simulator (colored in red) coexist and interact with each other. The multi-source control inputs include human drivers via different fidelity levels of driving simulators and diverse CAV algorithms. The visualization of the mixed platform is provided by a MR device, Hololens. The demonstration videos can be found in \url{https://github.com/dongjh20/MSH-MCCT}. }
 	\label{fig.MSH-framework}
 	\vspace{-2mm}
 \end{figure}
@@ -300,14 +301,14 @@ Recently, MR has been applied to CAVs testing and evaluation to extend the exist
 \subsection{Contributions}
 
 Based on the preliminary platform MCCT~\cite{dong2023mixed}, this paper introduces our work on an extended platform for CAVs testing, named MSH-MCCT (Multi-Source Human-in-the-Loop Mixed Cloud Control Testbed). 
-It is established based on the notion of mixedDT and serves for experimental testing and validation of CAVs technologies with multi-source real human drivers in the loop. As shown in Fig.~\ref{fig.MSH-framework}, MSH-MCCT consists of four parts: physical platform, virtual platform, multi-source control input, and mixed platform. The physical platform provides a miniature real-world testing environment, while the virtual platform brings flexible design for the quantity, motion behavior and dynamics of involved vehicles. The multi-source control input includes human drivers via various-fidelity levels of driving simulators, and diverse CAV algorithms.
-In particular, physical CAVs, virtual CAVs, physical HDVs, and virtual HDVs coexist and interact simultaneously within a unified and integrated environment, \ie, the mixed platform. 
+It is established based on the notion of mixedDT and serves for experimental testing and validation of CAVs with multi-source human drivers in the loop. As shown in Fig.~\ref{fig.MSH-framework}, MSH-MCCT consists of four parts: physical platform, virtual platform, multi-source control input, and mixed platform. The physical platform provides a miniature real-world testing environment, while the virtual platform brings flexible design for the quantity, motion behavior and dynamics of involved vehicles. The multi-source control input includes human drivers via various fidelity levels of driving simulators, and diverse CAV algorithms.
+In particular, multiple physical and virtual CAVs and HDVs coexist and interact simultaneously within an unified, integrated environment, namely mixed platform. 
 Our contributions and features of MSH-MCCT are specified as follows.
 
 \begin{itemize}
-	\item To our best knowledge, MSH-MCCT is the first DT testing platform for CAVs which integrates multiple real human drivers into the loop. Existing platforms commonly utilize driver behavior models~\cite{wu2021flow,li2022cooperative,wang2023deep} or incorporate one single human driver in the loop while the others are programmed~\cite{wang2021digital,warner2017simulator,wang2021digital2}. Our platform could capture the complex multi-interactivity nature between multiple CAVs and multiple HDVs in upcoming traffic environments. Validations on vehicle platooning with CAVs and multi-source human drivers in the loop demonstrate the effectiveness of the platform and mixedDT framework. 
+	\item To our best knowledge, MSH-MCCT is the first DT testing platform for CAVs which integrates multiple real human drivers into the loop. Existing platforms commonly utilize driver behavior models~\cite{wu2021flow,li2022cooperative,wang2023deep} or only single human driver in the loop while the others are programmed~\cite{wang2021digital,wang2021digital2}. Our platform could capture the complex multi-interactivity nature between multiple CAVs and multiple HDVs in mixed traffic environments. A mixed platooning experiment with CAVs and multi-source human drivers in the loop validates the effectiveness of the platform and mixedDT framework. 
 	
-	\item Based on mixedDT, human drivers and CAV algorithms  could control both physical and virtual vehicles through a cloud-based intermediary in MSH-MCCT. Existing human-in-the-loop testing platforms for CAVs mostly involve only one type of vehicles, either physical~\cite{la2012development,weiss2022high} or virtual~\cite{wang2021digital,maag2012studying,wang2021digital2}. In MSH-MCCT, by contrast, physical CAVs, virtual CAVs, physical HDVs, and virtual HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. Multi-source vehicles and control inputs from diverse and heterogeneous platforms and environments are integrated, which could achieve more potential applications than any individual ones alone. This integration provides an approach to address the ``organizational siloing'' obstacle for DT applications~\cite{grieves2017digital}.
+	\item Based on mixedDT, human drivers and CAV algorithms  could control both physical and virtual vehicles through a cloud-based intermediary in MSH-MCCT. Existing human-in-the-loop testing platforms for CAVs mostly involve only one type of vehicles, either physical~\cite{la2012development} or virtual~\cite{maag2012studying,wang2021digital}. In MSH-MCCT, by contrast, physical and virtual CAVs and HDVs could coexist and interact simultaneously within the same integrated environment, greatly enhancing the flexibility and scalability of experiments. Multi-source vehicles and control inputs are integrated, as well as diverse and heterogeneous platforms and environments, which could achieve more potential applications than any individual ones alone. This integration provides an approach to address the ``organizational siloing'' obstacle for DT applications~\cite{grieves2017digital}.
 	
 	\item MSH-MCCT supports a novel paradigm for conducting human-in-the-loop driving simulation via driving simulators, where a driver operates a physical vehicle based on the virtual driving field-of-view of its digital counterpart, \ie, twin vehicle. Existing work mostly employs a driving simulator to control either a physical vehicle based on a physical field-of-view~\cite{kannapiran2020go} or a virtual vehicle based on a virtual field-of-view~\cite{oeltze2015benefits,wang2020augmented}. In MSH-MCCT, the real physical vehicle dynamics and the flexible and scalable virtual driving field-of-view are simultaneously utilized, which indicates the potential of mixedDT to address the  “cyber-physical fusion” challenge from classical DT~\cite{tao2018digital}.
 \end{itemize}
@@ -317,9 +318,9 @@ The rest of this paper is organized as follows. Section~\ref{sec.2} presents the
 \begin{figure*}[t]
 	%\vspace{-3mm}
 	\centering
-	\includegraphics[scale=0.70]{Figures/MSH-methodV42.png}
+	\includegraphics[scale=0.76]{Figures/MSH-methodV32.png}
 	\vspace{-2mm}
-	\caption{The methodological framework diagram for conducting CAVs testing with multi-source human drivers in the loop via driving simulators in MSH-MCCT. Both physical and virtual vehicles could be controlled by human drivers and CAV algorithms through a cloud-based intermediary. Consequently, the four types of vehicles, \ie, physical HDVs, virtual HDVs, physical CAVs and virtual CAVs, coexist and interact with each other simultaneously within the mixed platform.}
+	\caption{The methodological framework diagram for conducting CAVs testing with multi-source human in the loop in MSH-MCCT. Both physical and virtual vehicles could be controlled by human drivers and CAV algorithms through a cloud-based intermediary. Consequently, the four types of vehicles, \ie, physical HDV, virtual HDV, physical CAV and virtual CAV, coexist and interact with each other simultaneously within the mixed platform. }
 	\label{fig.MSH-method}
 	\vspace{-2mm}
 \end{figure*}
@@ -328,66 +329,61 @@ The rest of this paper is organized as follows. Section~\ref{sec.2} presents the
 
 \section{Platform Architecture}
 \label{sec.2}
-In this section, we introduce the overall architecture and methodology framework of MSH-MCCT. As shown in Fig.~\ref{fig.MSH-framework}, MSH-MCCT consists of four parts: 
-\begin{enumerate}
- \setlength\itemsep{0.1em}
-    \item Physical platform, which is constructed on a sand table and provides a miniature real-world testing environment. The physical vehicles run on the physical platform.
-    \item Virtual platform, which is developed by a game engine. The virtual vehicles operate on the virtual platform, whose quantity, motion behavior and dynamics can be flexibly designed. 
-    \item Multi-source control input, including human drivers and CAV algorithms. 
-The driving actions performed by human drivers based on the driving field-of-view in driving simulators are measured by the steering wheels and pedals. The CAV algorithms deployed on the cloud or external hosts return control instructions based on the vehicle state information.
-\item Mixed platform, which is deployed in cloud servers. It bridges the physical platform, the virtual platform and the multi-source control input into an integrated whole, where they achieve synchronous operation and cross-platform interaction. 
-\end{enumerate}
+In this section, we introduce the overall architecture and methodology framework of MSH-MCCT. 
+
+As shown in Fig.~\ref{fig.MSH-framework}, MSH-MCCT consists of four parts: 
+1) Physical platform, which is constructed on a sand table and provides a miniature real-world testing environment. The physical vehicles run on the physical platform. 2) Virtual platform, which is developed by a game engine. The virtual vehicles operate on the virtual platform, whose quantity, motion behavior and dynamics can be flexibly designed. 3) Multi-source control input, including human drivers and CAV algorithms. 
+The driving actions performed by human drivers based on the driving field-of-view in driving simulators are measured by the steering wheel and pedals. The CAV algorithms deployed on the cloud or external hosts return control instructions based on the vehicle state information. 4) Mixed platform, which is deployed in cloud servers. It bridges the physical platform, the virtual platform and the multi-source control input into an integrated whole, where they achieve synchronous operation and cross-platform interaction. 
 
 
+The methodological framework of MSH-MCCT is shown in Fig.~\ref{fig.MSH-method}. Multiple CAVs and HDVs, each of which could be either physical or virtual, coexist and interact with each other in a unified environment, \ie, the mixed platform. 
+As the central component of MSH-MCCT, the cloud transmits vehicle state information from diverse platforms and environments to both the drivers and the CAV algorithms, and subsequently relays the control instructions from them to the corresponding vehicles for execution. Precisely, the cloud aligns and aggregates vehicle state data sent by both physical and virtual vehicles, and then transmits this data to the driving simulators and the hosts where the CAV algorithms are deployed. 
+The driving simulators render the driving field-of-view based on received data and collect corresponding control inputs by drivers. The CAV algorithms also generate control instructions based on received data. After the control instructions are generated by human drivers from driving simulators and CAV algorithms from their running hosts, the cloud distributes the received control instructions to the corresponding vehicles for execution after necessary conversion. 
 
-The methodological framework of MSH-MCCT is shown in Fig.~\ref{fig.MSH-method}. Multiple CAVs and HDVs, each of which could be both physical and virtual, coexist and interact with each other in a integrated environment, \ie, the mixed platform. 
-As the central component of MSH-MCCT, the cloud transmits vehicle state information from diverse platforms and environments to both the human drivers and the CAV algorithms, and subsequently relays the control instructions from them to the corresponding vehicles for execution. Precisely, the cloud aligns and aggregates vehicle state data sent by both physical and virtual vehicles, and then transmits this processed data to the driving simulators and the hosts where the CAV algorithms are deployed. 
-The driving simulators render the driving field-of-view based on received data and collect corresponding control inputs by the human drivers. The CAV algorithms also generate control instructions based on the received data.  The cloud distributes received control instructions to the corresponding vehicles for execution after necessary processing. 
-
-Basically, the cloud bridges the vehicles from diverse platforms and environments and the multi-source control input to achieve synchronous operation and cross-platform interaction. 
-From the aforementioned operation workflow, the cloud also serves as the core and backbone of MSH-MCCT. As illustrated in the right part of Fig.~\ref{fig.MSH-method}, the cloud mainly consists of five functional modules: 1)
+Basically, the cloud bridges the vehicles from diverse platforms and the multi-source control input to achieve synchronous operation and cross-platform interaction. 
+From the operation workflow, the cloud also serves as the core and backbone of MSH-MCCT. As illustrated in the right part of Fig.~\ref{fig.MSH-method}, the cloud mainly consists of five functional modules: 1)
 The communication module is responsible for information exchange between the cloud and other entities in the platform, as well as external devices. 2)
-The data aggregation module aligns and aggregates all the vehicle state data from diverse platforms and environments, and provides standardized formatted vehicle state data to be used by other modules or entities. 3) 
-The control instruction distribution module processes and distributes all the received control instructions from multi-source human drivers and diverse CAV algorithms, which are then transmitted to the corresponding vehicles by the communication module. 
+The data aggregation module aligns and aggregates data from all the vehicles in different platforms and environments, and provides standardized formatted data to be used by other modules or entities. 3) 
+The control instruction distribution module processes and distributes all received control instructions, which are then transmitted to corresponding vehicles by the communication module. 
 4) The visualization module utilizes the outcomes from the data aggregation module to accomplish the visualization of the mixed platform in both physical and virtual spaces.
 5) The Human-Machine Interface (HMI) and external devices module refers to interacting with entities in MSH-MCCT via HMI devices such as a head-mounted display and external devices such as personal computers. The methodology and the practical implementations will be covered in the following two sections.
 
 \begin{figure*}[t]
 	\centering
 	\subfigure[The physical field-of-view]
-	{\includegraphics[scale=0.18 ]{Figures/physical view.png}
+	{\includegraphics[scale=0.2 ]{Figures/physical view.png}
 	\label{fig.physical view}
 	}
 	%\hspace{10mm}
 	\subfigure[The virtual field-of-view]
-	{\includegraphics[scale=0.18 ]{Figures/virtual view.png}
+	{\includegraphics[scale=0.2 ]{Figures/virtual view.png}
 	\label{fig.virtual view}
 	}
     \subfigure[The speed prompt panel]
-	{\includegraphics[scale=0.18 ]{Figures/speed promt.png}
+	{\includegraphics[scale=0.2 ]{Figures/speed promt.png}
 	\label{fig.speed promt}
 	}
 	\vspace{-1mm}
-	\caption{Driving field-of-view and prompt panel. In (a) and (b), the snapshots of human-in-the-loop experiments based on physical and virtual field-of-view are presented respectively; see the screens for the specific view. In (c), the real-time speed prompt of the  preceding vehicle in the virtual driving field-of-view is displayed on the white panel on the top of the preceding vehicle.}
+	\caption{Driving field-of-view and prompt panel. In (a) and (b), the snapshot of human-in-the-loop experiment based on physical and virtual field-of-view are presented respectively. In (c), the speed prompt of preceding vehicle in the virtual driving field-of-view is shown in the white box.}
 	\label{fig.view and promot}
 \end{figure*}
 
 \section{Methodology}
 \label{sec.3}
-In this section, we introduce the methodology for conducting CAVs testing with multi-source human drivers in the loop via driving simulators in MSH-MCCT. Particularly, we elaborate on how the HDVs are controlled by human drivers via various-fidelity driving simulators. From the driver's perspective, we explain in detail how to drive physical and virtual vehicles in the platform. In addition, we present how CAVs and HDVs are integrated to operate together in the mixed platform. 
+In this section, we introduce the methodology for CAVs testing with multi-source human in the loop via driving simulators in MSH-MCCT. Particularly, we elaborate on how the HDVs are operated by multi-source human drivers. From the driver's perspective, we explain in detail how to drive physical and virtual vehicles in the platform. In addition, we present how HDVs and CAVs are integrated in the mixed platform. 
 
 \subsection{Driving a Physical Vehicle}
 
-Since many practical factors cannot be accurately replicated in the simulations~\cite{la2012development,kannapiran2020go}, such as vehicle dynamics, uncertainties in sensor measurement, and delays in communication and computation processes, we design the mode of driving physical vehicles via driving simulators based on mixedDT. 
-The physical vehicles run on the physical driving environment, which is a $1:14$ miniature sand table in MSH-MCCT with respect to the real world, and each vehicle uploads its state data, such as velocity and acceleration, to the cloud and then executes received driver's instructions from the cloud to update its own status. 
+Since many practical factors cannot be accurately replicated in the simulations~\cite{la2012development,kannapiran2020go}, such as vehicle dynamics, uncertainties in sensor measurement, and delays in communication and computation process, we design the mode of driving physical vehicles via driving simulators based on mixedDT. 
+The physical vehicles run on the physical driving environment, which is a $1:14$ miniature sand table in MSH-MCCT with respect to the real world, and each vehicle uploads its state data, such as velocity and acceleration, to the cloud and then executes received driver's instruction from the cloud to update its own status. 
 
 Based on the driving field-of-view delivered by screens, the driver operates the driving simulator, including the steering wheel, the accelerator and brake pedals, which can be precisely measured via the supporting software or Software Development Kit (SDK) of the driving simulator. 
 The simulator communicates with the cloud via wired connection to ensure real-time performance, and exchanges the driver’s control input signals and necessary data. 
-Particularly,  we develop two kinds of driving field-of-view: physical field-of-view and virtual field-of-view.
+Particularly,  we develop two kinds of driving field-of-view: driving based on physical field-of-view and driving based on virtual field-of-view.
 
 \subsubsection{Driving based on physical field-of-view}
 
-As shown in Fig.~\ref{fig.physical view}, the physical field-of-view observed by drivers is the real-time image captured by the on-board camera in the physical vehicle, which depicts the real-world scene in the physical platform. The image is uploaded to the cloud by the physical vehicle, and then received by the driving simulator to be subsequently displayed on the screen and visible to the driver. 
+As shown in Fig.~\ref{fig.physical view}, the field-of-view observed by drivers is the real-time image captured by the on-board camera in the physical vehicle, which depicts the real-world scene in the physical platform. The images are uploaded to the cloud by the physical vehicle, and then received by the driving simulator to be subsequently displayed on the screen and visible to the driver. 
 Since the driving simulator is commonly fixed-base and the physical vehicle is moving, this physical field-of-view via on-board cameras is typically employed for driving physical vehicles through simulators~\cite{la2012development,kannapiran2020go}. 
 
 However, since it is non-trivial to combine the virtual environment (particularly virtual vehicles) with the view from the on-board camera, this physical field-of-view is not capable to show the existence of virtual vehicles. 
@@ -395,47 +391,47 @@ In addition, when the physical vehicle is a miniature one, which is common due t
 
 \subsubsection{Driving based on virtual field-of-view}
 In this kind, the virtual driving field-of-view from the twin vehicle of the corresponding physical vehicle is utilized to be displayed to the driver; see Fig.~\ref{fig.virtual view} for visualization. 
-Since the status of the twin vehicle and the corresponding physical vehicle are synchronized in real time, it is only necessary to display the virtual driving field-of-view of the twin vehicle in the virtual environment to the driver, which is easily accessible in simulation software such as Unity and Carla. 
+Since the status of the twin vehicle and the corresponding physical vehicle are synchronized in real time, it is only necessary to display the virtual driving field-of-view of the twin vehicles in the virtual environment to the driver, which is easily accessible in simulation software such as Carla and Unity. 
 Precisely, the driving simulator continuously receives state information of all the vehicles from the cloud, and subsequently re-renders the driving field-of-view on screens. 
 Within the virtual field-of-view, all the physical vehicles are represented by their corresponding virtual twin vehicles. Hence, both physical and virtual vehicles can be simultaneously displayed to the driver, and thus supports experiments in the mixed space where both vehicles are involved. This resolves the aforementioned problems encountered by the physical field-of-view. 
 
-Moreover, the virtual field-of-view is highly flexible and scalable, allowing the incorporation of various virtual driving prompts and guidance~\cite{he2021vehicle}. 
+Moreover, the virtual field-of-view is highly flexible and scalable, allowing the incorporation of various virtual driving prompts and guidance~\cite{liu2021vision}. 
 Our MSH-MCCT platform also leverages this feature. One example is illustrated in Fig.~\ref{fig.speed promt}, where the real-time speed of the preceding vehicle is displayed to the human driver.
 
 \begin{remark}[A novel paradigm for human-in-the-loop driving simulations] 
 Cyber-physical fusion is regarded as one of the most critical challenges for DT applications~\cite{grieves2017digital}. 
 Very recently, a Virtual Reality (VR) device has been utilized in~\cite{weiss2022high} to provide the driver with a virtual driving field-of-view, while a full-size physical vehicle is employed to provide the driver with real-world physical feedback.
-For human-in-the-loop driving simulation via driving simulator, existing work mostly utilizes the simulator to control either a physical vehicle based on a physical field-of-view~\cite{la2012development,kannapiran2020go} or a virtual vehicle based on a virtual field-of-view~\cite{wang2021digital,ansar2023driver,wang2020augmented}.
-Our mixedDT-inspired approach integrates the physical vehicle dynamics and the virtual driving field-of-view by incorporating the virtual twin vehicle of the corresponding physical vehicle.  Consequently, the fusion of the physical vehicle and the virtual environment is achieved: the physical vehicle executes the driver's control instructions in the physical environment, and meanwhile the perceptual information of the physical vehicle in the mixed environment is provided virtually to the driver. This presents a novel paradigm for conducting human-in-the-loop driving simulations via driving simulators.
+For human-in-the-loop simulations via driving simulators, existing work mostly utilizes the simulator to control either a physical vehicle based on a physical field-of-view~\cite{kannapiran2020go} or a virtual vehicle based on a virtual field-of-view~\cite{wang2021digital,wang2020augmented}.
+Our mixedDT-inspired approach integrates the physical vehicle dynamics and the virtual driving field-of-view by incorporating the virtual twin vehicle of the corresponding physical vehicle.  Consequently, the fusion of the physical vehicle and the virtual environment is achieved: the physical vehicle executes the driver's control instructions physically, and meanwhile the perceptual information of the physical vehicle in the mixed platform is provided virtually to the driver. Moreover, multi-source human inputs via simulators are supported simultaneously in our platform. This presents a novel paradigm for conducting human-in-the-loop driving simulations via driving simulators.
 %Despite being a combination rather than a fusion of the physical and the virtual, it demonstrates researchers' awareness of the significance of this direction and their efforts towards it.
 \end{remark}
 
 \subsection{Driving a Virtual Vehicle}
 
-In this mode, a driver operates a virtual vehicle in a virtual driving environment via a driving simulator. Compared to the physical driving environment, this virtual one allows one to reproduce common or safety-critical scenarios in an easier way~\cite{maag2012studying}. Also, the dynamic properties of virtual vehicles can be arbitrarily configured as needed, which costs, instead, much higher time and financial resources for physical vehicles. 
+In this mode, a driver manipulates a virtual vehicle in a virtual driving environment via driving simulators. Compared to the physical driving environment, this virtual one allows one to reproduce common or safety-critical scenarios in an easier way~\cite{maag2012studying}. Also, the dynamic properties of virtual vehicles can be arbitrarily configured as needed, which costs, instead, much higher time and financial resources for physical vehicles. 
 
-In MSH-MCCT, the virtual vehicles and the virtual driving environment are developed based on a game engine, and they communicate with the cloud through wired connection to ensure real-time performance. The virtual driving environment, aligning with the real-world environment in terms of spatial extent, is a scaled digital replica of the physical driving environment (miniature physical sand table). 
-This forms the basis for quickly and accurately aligning the positional coordinates of the physical and virtual vehicles within the mixed platform, which are from the physical and virtual platforms respectively, elaborated in Sections~\ref{sec.integration in mixed} and~\ref{sec.mixed platform}.
+In MSH-MCCT, the virtual vehicles and the driving environment are developed based on a game engine, and they communicate with the cloud through wired connection to ensure real-time performance. The virtual driving environment, aligning with the real-world environment in terms of spatial extent, is a scaled digital replica of the physical driving environment (miniature physical sand table). 
+This forms the basis for aligning the states of physical and virtual vehicles from the physical and virtual platforms respectively within the mixed platform, and the details will be elaborated in Sections~\ref{sec.integration in mixed} and~\ref{sec.mixed platform}.
 Similar to the physical vehicle, the virtual vehicle sends its state data to the cloud and executes received driver's control instructions. 
 Furthermore, the first-person driving field-of-view of any virtual vehicle as illustrated in Fig.~\ref{fig.virtual view} is easily accessible in the game engine. 
-The remaining steps to drive a virtual vehicle in the virtual driving environment are the same as driving a physical vehicle based on virtual field-of-view.
+The remaining steps to drive a virtual vehicle in the virtual environment are the same as driving a physical vehicle based on virtual field-of-view.
 
 
 
-\subsection{Integration of CAVs and HDVs in the Mixed Platform}
+\subsection{Integration of HDVs and CAVs in the Mixed Platform}
 \label{sec.integration in mixed}
 
-Diverse CAVs and HDVs are integrated in the mixed platform operating on the cloud.
-As illustrated in the left part of Fig.~\ref{fig.MSH-method}, human drivers and CAV algorithms could control both physical and virtual vehicles through a cloud-based intermediary. 
-In other words, the four types of vehicles, \ie, physical HDVs, virtual HDVs, physical CAVs and virtual CAVs, coexist and interact with each other simultaneously within the mixed platform. 
-Precisely, the cloud integrates physical and virtual vehicles by the data aggregation module, and meanwhile, the cloud integrates human drivers and CAV algorithms via the control instruction distribution module, distributing control instructions  to the vehicles for execution; see the right part of Fig.~\ref{fig.MSH-method} for illustration. 
+Diverse HDVs and CAVs are integrated in the mixed platform operating on the cloud.
+As illustrated in the left panel of Fig.~\ref{fig.MSH-method}, human drivers and CAV algorithms could control either physical or virtual vehicles through a cloud-based intermediary. 
+In other words, the four types of vehicles, \ie, physical HDV, virtual HDV, physical CAV and virtual CAV, coexist and interact with each other simultaneously within the mixed platform. 
+Precisely, the cloud integrates physical and virtual vehicles by the data aggregation module, and meanwhile, the cloud integrates human drivers and CAV algorithms via the control instruction distribution module, distributing control instructions for execution; see the right panel of Fig.~\ref{fig.MSH-method} for illustration. 
 The cloud bridges the physical vehicles and the virtual vehicles with the human drivers and the CAV algorithms to operate together within a unified, shared environment, \ie, the mixed platform. This achieves simultaneous operation and cross-platform interaction between them, allowing for comprehensive exploration of complex interactions between multiple CAVs and HDVs associated with the future traffic environment~\cite{abdelgawad2017networked}.
 
-In the following, we present the details of the procedures in the cloud shown in the right part of Fig.~\ref{fig.MSH-method}. In the data aggregation module, the cloud initially aligns the state data such as the positional coordinates of all the vehicles from diverse platforms and environments, as the sizes and coordinate systems of different physical and virtual environments differ. 
+In the following, we present the details of the procedures in the cloud shown in Fig.~\ref{fig.MSH-method}. In the data aggregation module, the cloud initially aligns the state data of all the vehicles from diverse platforms and environments, as the sizes and coordinate systems of different physical and virtual environments differ. 
 Recall that the physical environment in MSH-MCCT is a $1:14$ miniature sand table with respect to the real world, while the virtual driving environment keeps consistent with the real world in terms of spatial extent. 
-After corrections for communication delays, the state data of all the vehicles is aggregated, which is then transformed into a standardized format, usable for other modules such as the visualization module and authorized external devices. 
-Consequently, the physical and virtual vehicles from the physical and virtual platforms respectively are integrated into a unified environment, and thus they can coexist and interact with each other. 
-Essentially, this process twins the physical vehicles into the virtual space, enabling them to interact with the virtual vehicles indirectly via their digital counterparts. 
+After corrections for communication delays, the state data of all the vehicles are aggregated, which is then transformed into a standardized format, usable for other modules such as the visualization module and authorized external devices. 
+Consequently, physical and virtual vehicles from the physical and virtual platforms respectively are integrated into a unified environment, and thus they can coexist and interact with each other. 
+Essentially, this process twins the physical vehicles into the virtual space, enabling them to interact with virtual vehicles indirectly via their digital counterparts. 
 
 In the control instruction distribution module, the cloud first performs scale and type conversions on all received control instructions from human drivers and CAV algorithms. 
 Scale conversion is necessary due to differences of dimensions between different driving environments. 
@@ -447,9 +443,9 @@ Finally, the processed instructions are converted into a standardized format for
 %In other words, a decoupled networked control structure is implemented in MSH-MCCT, the correspondence between the executed vehicles and the control inputs can be configured at anytime in the cloud even during experiments. 
 
 \begin{remark}[``Hot-swapping'' capability in MSH-MCCT] \label{Remark:Hotswapping}
-In most existing driving simulation platforms, a driving simulator is typically associated with controlling one pre-assigned vehicle, which is non-trivial to change during the experiments~\cite{wang2021digital,kannapiran2020go}. 
+In most existing driving simulation platforms, a driving simulator is typically associated with controlling one pre-assigned vehicle, which is non-trivial to change during the experiments~\cite{kannapiran2020go,wang2021digital}. 
 Based on the mixedDT framework, MSH-MCCT achieves decoupling between controlled vehicles and driving simulators. 
-Their correspondence can be dynamically configured as needed within the cloud at any time. After the alteration, the cloud forwards the driver's control instructions to the new corresponding vehicle for execution. Note that the driving field-of-view of each vehicle is available in the local simulation software. 
+Their correspondence relationship can be dynamically configured as needed within the cloud at any time. After the alteration, the cloud forwards the driver's control instructions to the new corresponding vehicle for execution. Note that the driving field-of-view of different vehicles are all available in the local simulation software. 
 Consequently, drivers can switch between driving different vehicles smoothly during experiments, achieving a ``hot-swapping'' property in  MSH-MCCT. 
 This significantly enhances the flexibility and scalability for conducting human-in-the-loop experiments via driving simulators. For instance, one single driving simulator can accomplish multiple types of driving simulations. 
 Moreover, remote driving interventions can also be achieved for non-functional CAVs. 
@@ -474,8 +470,9 @@ Moreover, remote driving interventions can also be achieved for non-functional C
 	{\includegraphics[scale=0.165]{Figures/virtual vehicleV9.png}
 		\label{fig.virtual vehicle}}
 	\vspace{-2mm}
-	\caption{Physical and virtual driving environments and vehicles. (a) The physical sand table, \ie, the physical driving environment, having a size of $9\,\mathrm{m} \times 5\,\mathrm{m}$. (b) The virtual sand table, \ie, the virtual driving environment, developed based on the Unity game engine. (c) The miniature physical vehicle. A color block card is pasted to the top for localization. (d) Two commonly used vehicle body models and the default dynamics model of the virtual vehicles, \ie, the typical bicycle model~\cite{rajamani2011vehicle}. 
+	\caption{Physical and virtual driving environments and vehicles. (a) The physical sand table, \ie, the physical driving environment, having a size of $9\,\mathrm{m} \times 5\,\mathrm{m}$. (b) The miniature physical vehicle. A color block is pasted to the top for localization. (c) The virtual sand table, \ie, the virtual driving environment, is developed based on the Unity game engine. (d) Two commonly used vehicle body models and the default dynamics model of the virtual vehicle, \ie, the typical bicycle model. 
 	}
+ \vspace{-2mm}
 	\label{fig.physical platform}
 \end{figure*}
 
@@ -492,25 +489,24 @@ In this section, we present the practical implementation details of the four com
 \begin{table*}[t]
 \footnotesize
 \caption{Platform Setups}
-\label{tab.platform parameters}
 \centering
 		\begin{threeparttable}
 		\setlength{\tabcolsep}{10mm}{
 			\begin{tabular}{cc}
    \toprule
 				Component & Setup \\\hline
-				Physical sand table & $9\,\mathrm{m} \times 5\,\mathrm{m}$,  $1:14$ with respect to the real-world driving environment \\
+				Physical sand table & $9\,\mathrm{m} \times 5\,\mathrm{m}$,  $1:14$ with respect to the real driving environment \\
                 Roadside sensors in the physical platform & Four identical cameras in a $2\times 2$ manner with overlap \\
                 Roadside facilities in the physical platform & $73$ street lamps, $11$ traffic lights and $3$ lifting rods \\
-                Miniature physical  vehicles & $215\,\mathrm{mm} \times 190\,\mathrm{mm} \times 125\,\mathrm{mm}$, powered by Raspberry Pi 4B\\
+                Physical miniature vehicles & $215\,\mathrm{mm} \times 190\,\mathrm{mm} \times 125\,\mathrm{mm}$, powered by Raspberry Pi 4B\\
                 Host of the virtual platform & Processor: Intel Core i7-10700K CPU, Memory: 16 GB \\
                 Host of the G29 simulator & Processor: Intel Core i7-10700 CPU, Memory: 16 GB  \\
                 Host of the InnoSimulation simulator & Processor: Intel Core i7-8700 CPU, Memory: 16 GB  \\
-                Cloud server for the mixed platform & Processor: Intel Xeon Gold 5220R CPU, Memory: 64 GB \\
+                Cloud server deploying the mixed platform & Processor: Intel Xeon Gold 5220R CPU, Memory: 64 GB \\
                 
 				\bottomrule
 		\end{tabular}}
-  
+  \label{tab.platform parameters}
 		\end{threeparttable}
 	\vspace{-2mm}
 \end{table*}
@@ -519,12 +515,12 @@ In this section, we present the practical implementation details of the four com
 
 The physical platform represents the physical space in mixedDT, and is constructed on a sand table. It mainly consists of physical driving environment, physical vehicles and roadside sensors and facilities. 
 
-The physical sand table shown in Fig.~\ref{fig.physical environment} provides the physical driving environment of MSH-MCCT, which is a controllable and affordable miniature real-world testing environment. 
-The sand table contains two-way four-lane roads in the middle and two-way two-lane roads in both sides, as well as intelligent traffic lights. This basic road structure of the physical platform could support common CAVs  technologies, such as platoon control~\cite{wang2021leading}, multi-lane formation~\cite{cai2022formation},  intersection cooperation~\cite{hu2023lane} and traffic network management~\cite{lu2021optimization}. 
+The physical sand table shown in Fig.~\ref{fig.physical environment} provides the physical driving environment of MSH-MCCT, which is a controllable and affordable miniature physical testing environment. 
+The sand table contains two-way four-lane roads in the middle and two-way two-lane roads in both sides of the sand table, as well as intelligent traffic lights. This basic structure of the physical platform could support common CAVs  technologies, such as platoon control~\cite{wang2021leading}, multi-lane formation~\cite{cai2022formation},  intersection cooperation~\cite{hu2023lane} and traffic network management~\cite{lu2021optimization}. 
 
-The physical vehicles in MSH-MCCT are the miniature vehicles shown in Fig.~\ref{fig.physical vehicle} and there are currently nine identical vehicles. The vehicle is rear-wheel drive and front-wheel steering with an Ackerman steering structure. The color block card on the top of each vehicle is recognized by the roadside cameras for localization.
-The control paradigm of the physical vehicles adopts a cloud-based networked control architecture~\cite{xu2023cloud}. 
-Precisely, the physical vehicle subscribes to the control instructions published in the Robot Operating System (ROS) topic message form by the cloud, and then executes it to achieve desired velocity and steering angle. Under this architecture, the execution and calculation of the control instructions are fully decoupled, which supports the aforementioned hot-swapping property in Remark~\ref{Remark:Hotswapping}. 
+The physical vehicles in MSH-MCCT are miniature vehicles shown in Fig.~\ref{fig.physical vehicle} and there are currently nine identical vehicles. The vehicle is rear-wheel drive and front-wheel steering with an Ackerman steering structure. The color blocks on the top of each vehicle are recognized by roadside cameras for localization.
+The control paradigm of physical vehicles adopts a cloud-based networked control architecture~\cite{xu2023cloud}. 
+Precisely, the physical vehicle subscribes to the control instructions published in the Robot Operating System (ROS) topic message form by the cloud, and then executes it to attain desired velocity and steering angle. Under this architecture, the execution and calculation of the control instructions are fully decoupled, which supports the aforementioned hot-swapping property in Remark~\ref{Remark:Hotswapping}. 
 
 
 
@@ -535,12 +531,12 @@ The virtual platform developed by the Unity game engine represents the virtual s
 The virtual driving environment reproduces the physical driving environment in Unity with a $14:1$ scaling ratio, thus having a consistent size as real-world roads; see Fig.~\ref{fig.virtual environment} for demonstration. The update frequency of the entire scene in the virtual platform is $50\,\mathrm{FPS}$.
 
 
-The virtual vehicles exist independently in the virtual platform without physical counterparts, while classical DT commonly reproduces the physical vehicles in a digital platform (see, \eg,~\cite{chalaki2022research,goldfain2019autorally}).
-Due to the independent existence of the virtual vehicles, their quantity, motion behavior and dynamics can be arbitrarily designed. 
-Still, they can naturally be designed to serve as digital replicas of the physical vehicles, corresponding to the twin vehicles in classical DT. 
-The typical bicycle model~\cite{rajamani2011vehicle} is utilized as the default dynamics model; see the right panel of Fig.~\ref{fig.virtual vehicle} for demonstration. 
-Two commonly used vehicle body models are also presented in Fig.~\ref{fig.virtual vehicle}.
-In addition, unlike the physical vehicles, obtaining real-time and accurate states of the virtual vehicles in the virtual platform is highly convenient. 
+The virtual vehicles could independently exist in the virtual platform without physical counterparts, while classical DT commonly reproduces the physical vehicles in a digital platform (see, \eg,~\cite{goldfain2019autorally,chalaki2022research}).
+Due to the independent existence of the virtual vehicle, its quantity, motion behavior and dynamics can be arbitrarily designed. 
+Still, it can naturally be designed to serve as a digital replica of a physical vehicle, corresponding to the twin vehicle in classical DT. 
+The typical bicycle model~\cite{rajamani2011vehicle} is utilized as the default dynamics model, see the right panel in Fig.~\ref{fig.virtual vehicle} for demonstration. 
+Two commonly used vehicle body models are presented in Fig.~\ref{fig.virtual vehicle}.
+In addition, unlike physical vehicles, obtaining real-time and accurate states of virtual vehicles in the virtual platform is highly convenient. 
 
 
 
@@ -548,13 +544,13 @@ In addition, unlike the physical vehicles, obtaining real-time and accurate stat
 	\vspace{1mm}
 	\centering
 	\subfigure[G29 simulator]
-	{\includegraphics[scale=0.13]{Figures/three simulators V4.png}
+	{\includegraphics[scale=0.57]{Figures/three simulatorsV1.png}
 		\label{fig.g29 simulators deployment}}
 	\subfigure[InnoSimulation simulator]
-	{\includegraphics[scale=0.13]{Figures/INNO simulatorV3.png}
+	{\includegraphics[scale=0.2]{Figures/InnoSimulation.JPG}
 		\label{fig.InnoSimulation}}
 	\vspace{-1mm}
-	\caption{Driving simulators with various-fidelity levels. (a) The three Logitech G29 Driving Force simulators, each of which comprises one steering wheel, an accelerator pedal, a brake pedal and a host computer. (b) The high-fidelity commercial driving simulator from InnoSimulation, consisting of a driver cabin, three screens, a motion platform and a host computer.
+	\caption{Driving simulators with various fidelity levels. (a) The three Logitech G29 Driving Force simulators, including one steering wheel, an accelerator pedal, a brake pedal and a host computer. (b) The high-fidelity driving simulator from InnoSimulation, consisting of a driver cabin, three screens, a motion platform and a host computer.
 	}
 	\label{fig.moniqi}
 \end{figure}
@@ -566,29 +562,29 @@ The above presents the controllable physical and virtual vehicles in MSH-MCCT. I
 
 Human driver's driving actions are measured and transmitted by the driving simulator, including the steering wheel angle, the accelerator pedal signal and the brake pedal signal. 
 In MSH-MCCT, two types of driving simulators are deployed: three Logitech G29 Driving Force simulators, and one high-fidelity commercial driving simulator from InnoSimulation; see Fig.~\ref{fig.moniqi} for illustration. 
-In theory, our methodology can support the integration of an arbitrary number of driving simulators with various-fidelity levels in one testing environment.
+In theory, our methodology can support the integration of an arbitrary number of driving simulators with different fidelity in one testing environment.
 
-The G29 simulator depicted in Fig.~\ref{fig.g29 simulators deployment} comprises one steering wheel with turning force feedback, an accelerator pedal, a brake pedal and a host computer. 
-The steering wheel has a rotation range of $900$ degrees, identical to the real cars. The sampling resolution of the steering wheel and the two pedals are all $65535$. Their values are retrieved through the official SDK from Logitech. 
+The G29 simulator depicted in Fig.~\ref{fig.g29 simulators deployment} comprises one steering wheel with turning force feedback, an accelerator pedal, a brake pedal and a host computer. The sampling resolution of the two pedals are all $65535$. 
+The steering wheel has a rotation range of 900 degrees, identical to the real cars. Their values are retrieved through the official SDK from Logitech. 
 
 As shown in Fig.~\ref{fig.InnoSimulation}, the InnoSimulation simulator consists of a driver cabin, three screens, a motion platform and a host computer. 
 The driver cabin fully replicates the configuration of a real vehicle's driver seat, including the steering wheel, accelerator and brake pedals, gear shifter, dashboards, seat belt, and handbrake, etc., providing the driver an close feeling to driving a real vehicle. 
-The three screens provide drivers an immersive driving field-of-view. Particularly, the scenes from the rear-view mirrors are displayed on three specific regions of the middle screen, corresponding to the left, right, and upper rear-view mirrors of a real car. 
-The motion platform is driven by motors and located beneath the driver cabin, providing haptic feedback during driving, and thus enabling a more realistic driving experience. 
+Three screens provide drivers an immersive driving field-of-view. Particularly, the scenes from the rear-view mirrors are displayed on three specific regions of the middle screen, corresponding to the left, right, and upper rear-view mirrors of a real car. 
+The motion platform is driven by motors and located beneath the driver cabin, providing haptic feedback during driving such as pitch and roll, and thus enabling a more realistic driving experience. 
 
 Human-in-the-loop experiments via the InnoSimulation simulator are supported by a dedicated commercial software, \ie, SCANeR Studio, which accomplishes the measurement and transmission of driver input signals. 
 Moreover, SCANeR Studio is an independent and comprehensive simulation software with extensive Application Programming Interfaces (APIs) similar to Unity. To fully leverage the InnoSimulation simulator hardware via the APIs and enrich driving environment in MSH-MCCT, we construct another virtual driving environment in SCANeR Studio replicating the physical sand table at a $14:1$ scale. This unique driving environment is represented as ``InnoSimulation environment'' in the following for simplicity. 
-When operating the InnoSimulation simulator, in addition to driving the vehicles in the physical and virtual platforms similar to the G29 simulators, the driver can also operate the virtual vehicles in the InnoSimulation environment, 
-which can be integrated into the mixed platform in a similar manner to the virtual vehicles in the virtual platform. 
+When operating the InnoSimulation simulator, in addition to driving the vehicles in the physical and virtual platforms similar to the G29 simulators, the driver can also operate the virtual vehicles in the InnoSimulation environment. 
+The virtual vehicles in the InnoSimulation environment can be integrated into the mixed platform in a similar manner to the virtual vehicles in the virtual platform. 
 
 %In MCCT, the potential of the virtual vehicles and the driving simulators are fully exploited thanks to mixedDT. 
 
 \begin{figure*}[t!]
 	%\vspace{-3mm}
 	\centering
-	\includegraphics[scale=0.72]{Figures/MSH-snapshotV21.pdf}%PDF:0.72
-	%\vspace{-2mm}
-	\caption{A demonstration diagram of practical MSH-MCCT operation. Multiple vehicles in diverse platforms and environments, controlled by multiple human drivers and CAV algorithms, interact with each other simultaneously via the mixed platform. The visualization of the mixed platform projected to virtual space by Unity is presented on the middle panel. Precisely, there are three miniature physical vehicles from the physical platform (outlined in yellow), four virtual vehicles from the virtual platform (outlined in cyan), and one virtual vehicle from the InnoSimulation environment (outlined in red). For the multi-source control input, three human drivers on the G29 simulators and one human driver on the InnoSimulation simulator collectively control the four vehicles, while the other four vehicles are controlled by CAV algorithms. 
+	\includegraphics[scale=0.72]{Figures/MSH-snapshotV18.pdf}%PDF:0.72
+	\vspace{-2mm}
+	\caption{A demonstration diagram of practical MSH-MCCT operation. Multiple vehicles in diverse platforms and environments controlled by multiple human drivers and CAV algorithms interact with each other via the mixed platform. The visualization of the mixed platform projected to virtual space by Unity is presented on the middle panel. Precisely, there are three miniature physical vehicles from the physical platform (colored in yellow), four virtual vehicles from the virtual platform (colored in cyan), and one virtual vehicle from the InnoSimulation environment (colored in red). For the multi-source control input, three human drivers on the G29 simulators and one human driver on the InnoSimulation simulator collectively control the four vehicles, while the other four vehicles are controlled by CAV algorithms. 
     }
 	\label{fig.mixed platform}
 	\vspace{-2mm}
@@ -599,7 +595,7 @@ The CAV algorithm is the main testing subject in MSH-MCT, and both single-vehicl
 
 This high level of compatibility enables researchers to conduct algorithm validation experiments quickly and conveniently. 
 Human control instructions are transmitted separately by multiple driving simulators to the cloud for subsequent processing. Similarly, CAV algorithms can also run distributedly in multiple computers. 
-Besides, since an algorithm can simultaneously control any number of vehicles, multiple CAV algorithms can flexibly match the number of vehicles they control. 
+Besides, an algorithm can simultaneously control any number of vehicles, and thus multiple algorithms can flexibly match the number of vehicles they control. 
 In addition, the lateral and longitudinal control of each vehicle are also decoupled, which supports flexible testing of a dedicated algorithm. 
 For example, experimenters can only control the longitudinal movement of one vehicle using their own algorithms, while the lateral movement of this vehicle and other CAVs are controlled by algorithms deployed on the cloud or external computers. 
 %This feature also demonstrates the flexibility and scalability of MSH-MCCT. 
@@ -607,7 +603,7 @@ For example, experimenters can only control the longitudinal movement of one veh
 \subsection {Mixed Platform}
 \label{sec.mixed platform}
 The mixed platform corresponds to the mixed space in mixedDT and is directly operating on the cloud server. 
-It is responsible for system-wise data fusion, control and scheduling, and provides a unified access for external devices to MSH-MCCT. 
+It is responsible for system-wise data fusion, control and scheduling, and provides an unified access for external devices to MSH-MCCT. 
 Recall that the mixed space in mixedDT is an integration of the physical and virtual spaces, where physical and virtual entities coexist and interact in real-time. 
 In MSH-MCCT, the physical platform in the physical space, the virtual platform in the virtual space, and the multi-source control input in the physical and virtual spaces are integrated into the mixed platform in the mixed space, through which they indirectly interact with each other. 
 
@@ -616,15 +612,15 @@ We present one example in Fig.~\ref{fig.mixed platform}.
 Three physical vehicles in the physical platform, four virtual vehicles in the virtual platform and one virtual vehicle in the InnoSimulation environment are all running in one unified environment, \ie, the mixed platform; see the upper and middle panels of Fig.~\ref{fig.mixed platform}. 
 The vehicles' state data are transmitted to the multi-source control input through the cloud. 
 The control inputs consist of multi-source human drivers (the G29 simulators and the InnoSimulation simulator) and diverse CAV algorithms; see the lower panel of Fig.~\ref{fig.mixed platform}. 
-These control inputs are transmitted by the cloud to the corresponding vehicles for execution and then generate ``control output''. %, forming a complete loop. 
-In this way, MSH-MCCT operates as one integrated and comprehensive system. 
+These control inputs are transmitted by the cloud to corresponding vehicles for execution and then generate ``control output''. %, forming a complete loop. 
+In this way, the MSH-MCCT operates as one integrated and comprehensive system. 
 
 Specifically, the cloud obtains the state information of the physical vehicles after fusing the measured data from roadside and on-board sensors, while the state information of the virtual vehicles is naturally available to the cloud. 
-Due to the unified design among the physical, virtual, and  InnoSimulation environments, the cloud can quickly and accurately align the state data of all types of the vehicles. 
+Due to the unified design among the physical, virtual, and  InnoSimulation environments, the cloud can accurately and quickly align state data of all types of vehicles. 
 Then, the cloud projects the location and motion states of all the vehicles into a unified environment, \ie, the mixed platform. 
-As a result, the state data from all the vehicles are aggregated in the cloud into a standardized format data pool, accessible to any authorized entity, such as the multi-source control input. %A substantial space is available in the cloud  for data storage.
+As a result, the state data from all the vehicles are aggregated in the cloud into a standardized format data pool, accessible to any authorized entity, such as the multi-source control inputs. %A substantial space is available in the cloud  for data storage.
 
-Meanwhile, the cloud receives, transforms, and sends the multi-source control inputs of human drivers and CAV algorithms to the corresponding vehicles for execution, with an update frequency of $50\,\mathrm{Hz}$. Since the control instructions can be directly sent to the corresponding vehicles for execution, they do not need to be aggregated together like the vehicle state data. Therefore, the cloud processes the control instructions separately according to their corresponding execution vehicles, which makes full use of the abundant multi-thread computational resources in the cloud to improve processing speed. 
+Meanwhile, the cloud receives, transforms, and sends the multi-source control inputs of human drivers and CAV algorithms to corresponding vehicles for execution, with an update frequency of $50\,\mathrm{Hz}$. Since the control instructions can be directly sent to the corresponding vehicles for execution, they do not need to be aggregated together like the vehicle state data. Therefore, the cloud processes the control instructions separately according to their corresponding execution vehicles, which makes full use of the abundant multi-thread computational resources in the cloud to improve processing speed. 
 The control instructions are first converted to the scale and type of the corresponding vehicle, and then transformed into specific formats after appropriate filtering. Subsequently, they are sent to the corresponding vehicles for execution according to specific protocols. 
 Specifically, the instructions to the physical vehicles are converted into ROS message format and then sent to different physical vehicles via ROS. The instructions to the virtual vehicles in the virtual platform are converted into a predefined JSON format and then sent to the virtual platform via ZeroMQ. Then, the status of all kinds of the vehicles are updated accordingly. %The virtual  vehicle in the InnoSimulation simulator is usually controlled by a human driver. 
 
@@ -637,7 +633,7 @@ In other words, four types of vehicles from diverse platforms and environments c
 \begin{remark}[Integration of diverse platforms and environments]
 Based on mixedDT, MSH-MCCT overcomes the typical ``organizational siloing'' problem for DT applications~\cite{grieves2017digital}. Precisely, it bridges the vehicles in the physical and virtual platforms, and the multi-source control inputs from multiple driving simulators and CAV algorithm hosts to operate together simultaneously within one unified and integrated environment, \ie, the mixed platform. 
 The boundaries between these originally independent and separate platforms and environments are eliminated in MSH-MCCT, and synchronous operation and cross-platform interaction are achieved; see Fig.~\ref{fig.mixed platform} for illustration. 
-In this manner, one can fully explore and utilize the advantages of the diverse platforms and environments based on mixedDT and thus realize more potential applications than existing platforms~\cite{wang2021digital,la2012development,kannapiran2020go}. 
+In this manner, one can fully explore and utilize the advantages of the diverse platforms and environments based on mixedDT and thus realize more potential applications than existing platforms~\cite{la2012development,kannapiran2020go,wang2021digital}. 
 %MSH-MCCT represents a valid application of the mixedDT in the context of CAVs testing in mixed traffic. 
 %Through the effectiveness of MSH-MCCT, we believe that the proposed mixedDT notion has taken a solid step towards eventually overcoming this obstacle. 
 
@@ -652,105 +648,79 @@ In MSH-MCCT, we design two approaches: 1) First is visualization projected to ph
 
 The communication between the cloud and other components in MSH-MCCT or external devices mainly adopts the open source cross-language network library ZeroMQ with TCP protocol, through which the cloud can establish interaction with various entities. 
 Specifically, wireless connection mode is $5\mathrm{GHz}$ WiFi, and wired connection mode is Ethernet. 
-Note that the communication between the driving simulators and the cloud is established by reliable and high-speed wired connection. 
+Note that the communication between the driving simulators and the cloud is established by reliable and high-speed wired connection. The average communication delay is $1.39\,\mathrm{ms}$, and thus the requirements of real-time human-in-the-loop experiments via driving simulators can be fully satisfied~\cite{liao2021cooperative}.
 
-Additionally, many HMI applications can be implemented via MR devices, such as the HoloLens, which allow users to interact with the entities in MSH-MCCT. 
-For example, we can put an obstacle at a specific position at anytime to test obstacle avoidance algorithms, and change the velocity of a specific vehicle to impose external perturbations during experiments. Interested readers are referred to~\cite[Section IV]{dong2023mixed} for details.
+Additionally, many HMI applications can be implemented via MR devices, such as HoloLens, which allow users to interact with the entities in MSH-MCCT. 
+For example, we can put an obstacle at a specific position at anytime to test obstacle avoidance algorithms, and change the velocity of a specific vehicle to impose external perturbations during experiments. Interested readers are referred to~\cite[Section IV.B]{dong2023mixed} for details.
 
-
-
-
-
-
-
-
-\section{Experimental Validations}
-\label{sec.5}
-In this section, we present two experiments on mixed platooning with the coexistence of CAVs and HDVs to validate the effectiveness of MSH-MCCT. Existing research on mixed platooning mostly utilize traffic simulations for validation, where the HDVs' dynamics are captured by typical car-following models; see, \emph{e.g.},~\cite{wu2021flow,wang2023distributed}. In the following, we aim to demonstrate the capability of MSH-MCCT for conducting CAVs testing with multi-source real human drivers in the loop.  
-Particularly, cross-platform interaction is achieved by organizing vehicles from diverse platforms and environments into one platoon via the mixed platform. Note that in this section, all the units have been aligned with the real-world environment. 
-
-\subsection{Experimental Setup}
 
 \begin{figure}[t]
 	\vspace{1mm}
 	\centering
-	\includegraphics[scale=0.36]{Figures/trackV7.pdf}%PDF:0.72
-	%\vspace{-2mm}
-	\caption{The vehicles drive along the direction $A \rightarrow B\rightarrow C\rightarrow D\rightarrow E\rightarrow F\rightarrow A$. In Experiment A, when reaching point $C$, the velocity of the head vehicle suffers from a half-sinusoidal perturbation. In Experiment B, when reaching point $D$, a braking perturbation is imposed on the head vehicle. 
-    }
-	\label{fig.track}
-	\vspace{-2mm}
+	\subfigure[Driving track of the mixed platoon]
+	{\includegraphics[scale=0.36]{Figures/trackV7.pdf}
+		\label{fig.track}}
+			
+	\subfigure[Formation of the mixed platoon]
+	{\includegraphics[width=8.5cm]{Figures/formationV2.pdf}
+		\label{fig.formation-quanhun}}
+	\vspace{-1mm}
+	\caption{Experimental setup. (a) The vehicles drive along the direction $A \rightarrow B\rightarrow C\rightarrow D\rightarrow E\rightarrow F\rightarrow A$. In Experiment A, when reaching point $C$, the velocity of the head vehicle suffers from a half-sinusoidal disturbance. In Experiment B, when reaching point $D$, a braking disturbance is imposed on the head vehicle. (b) The formation of the platoon. Note that vehicle $8$ is the virtual HDV controlled through the InnoSimulation simulator, while the other three (physical or virtual) HDVs are controlled through the G29 simulator. 
+	}
+	\label{fig.track and formation}
 \end{figure}
-
-\begin{table*}[t]%h
-\footnotesize
-\caption{Driving Mode Setups}
-\label{tab.hdv_setup}
-\centering
-		\begin{threeparttable}
-		\setlength{\tabcolsep}{1mm}{
-			\begin{tabular}{ccccc}
-   \toprule
-    ID & Type & Entity & Control input & Field-of-View   \\\hline
-    1 & CAV & Physical vehicle & CACC controller & N/A \\
-    2 & HDV & Physical vehicle & Human via G29 simulator & Physical field-of-view from the physical sand table \\
-    3 & CAV & Virtual vehicle & CACC controller & N/A \\
-    4 & HDV & Physical vehicle & Human via G29 simulator & Virtual field-of-view of the virtual twin vehicle from the Unity virtual environment\\
-    5 & HDV & Virtual vehicle & Human via G29 simulator & Virtual field-of-view from the Unity virtual environment \\
-    6 & CAV & Virtual vehicle & CACC controller & N/A \\
-    7 & CAV & Virtual vehicle & CACC controller & N/A \\
-    8 & HDV & Virtual vehicle & Human via InnoSimulation simulator & Virtual field-of-view from the InnoSimulation virtual environment \\
-				\bottomrule
-		\end{tabular}}
-		\end{threeparttable}
-\end{table*}
-
 \begin{figure*}[t]
 	\vspace{1mm}
 	\centering
 	\subfigure[Physical platform captured by roadside cameras]
-	{\hspace{0.1mm}
- \includegraphics[scale=0.2]{Figures/roadside camerasV2.png}
+	{\includegraphics[scale=0.2]{Figures/roadside cameras.png}
 		\label{fig.roadside cameras}}
 	\subfigure[The mixed platoon in the Unity virtual environment]
 	{\includegraphics[scale=0.2]{Figures/vis-mixed.png}
 		\label{fig.vis-mixed}}
-    \subfigure[Three G29 simulators]
-    {    \hspace{0.1mm}
-    \includegraphics[scale=0.2]{Figures/G29simulatorsV2.png}
+  \subfigure[Three G29 simulators]
+	{\includegraphics[scale=0.2]{Figures/G29simulators.png}
 		\label{fig.G29simulators}}
   \subfigure[InnoSimulation simulator]
 	{\includegraphics[scale=0.2]{Figures/INNO simulators.png}
 		\label{fig.INNO simulators}}
 	\vspace{-1mm}
-	\caption{Snapshots of the experiments. In (a), the image captured by the roadside cameras in the physical platform displays running physical vehicles. In (b), the visualization of the mixed platoon by Unity is presented, with the coexistence of four HDVs and four CAVs. The corresponding formations of the platoon are shown in Table~\ref{tab.hdv_setup}. In (c), and (d), three male and one female drivers with various levels of driving experiences operate vehicles via different-fidelity driving simulators. Particularly, as can be observed from the screens in (c), the driver in the middle is driving based on physical field-of-view, while the other two are driving based on virtual field-of-view. In (d), the driver is driving based on virtual field-of-view from the InnoSimulation environment, whose overview is shown in the lower right corner of (d). The corresponding videos can be found in \url{https://dongjh20.github.io/MSH-MCCT/}.
+	\caption{Snapshots of experiments. In (a), the image captured by roadside cameras in the physical platform displays running physical vehicles. In (b), the visualization of the mixed platoon by Unity is presented, with the coexistence of four HDVs and four CAVs. The corresponding formations of the platoon are shown in Fig.~\ref{fig.formation-quanhun}. In (c), and (d), three male and one female drivers with different levels of driving experiences operate vehicles via different fidelity driving simulators. A visualization of the mixed platoon in the InnoSimulation environment is shown in the lower right corner of (d). The recorded videos can be found in \url{https://github.com/dongjh20/MSH-MCCT}.
 	}
  \vspace{-2mm}
 	\label{fig.snapshot}
 \end{figure*}
 
-In our experiments, a platoon of $8$ vehicles, consisting of one head vehicle and $7$ following vehicles, are deployed to run along the track $A \rightarrow B\rightarrow C\rightarrow D\rightarrow E\rightarrow F\rightarrow A$ in Fig.~\ref{fig.track} with a lap of about $245\,\mathrm{m}$. In Experiment A, the head vehicle maintains a fixed velocity of $10.08\,\mathrm{km/h}$ during the driving track, and a half-sinusoidal perturbation occurs when it reaches point $C$ shown in Fig.~\ref{fig.track}. The perturbation period is $3.50\,\mathrm{s}$, and its amplitude is $3.02\,\mathrm{km/h}$. 
-In Experiment B, the head vehicle still maintains a fixed velocity of $10.08\,\mathrm{km/h}$, but when it reaches point $D$, a barking perturbation is imposed, which consists of three phases: decelerating to $1.01\,\mathrm{km/h}$ with a deceleration of $0.28\,\mathrm{m/s^2}$, maintaining this speed for $20\,\mathrm{s}$, and finally returning to $10.08\,\mathrm{km/h}$ after $12\,\mathrm{s}$. %; see Fig.~\ref{fig.speed-B}.1 for illustration. 
 
-The detailed driving mode setups for the platoon are illustrated in Table~\ref{tab.hdv_setup}, where there are three physical vehicles and five virtual vehicles, among which one is from the InnoSimulation environment, and the other four are from the virtual platform. Note that in the experiments, the formation pattern is also the same as that of the example shown in Fig.~\ref{fig.mixed platform}. The snapshots of the two experiments are shown in Fig.~\ref{fig.snapshot}, and the recorded videos can be found in \url{https://dongjh20.github.io/MSH-MCCT/}. Precisely, the HDVs and the CAVs are controlled as follows:
+\section{Experimental Validations}
+\label{sec.5}
+In this section, we present two experiments on mixed platooning with the coexistence of HDVs and CAVs to validate the effectiveness of MSH-MCCT. Existing research on mixed platooning mostly utilize traffic simulations for validation, where the HDVs' dynamics are captured by typical car-following models; see, \emph{e.g.},~\cite{wu2021flow,wang2023distributed}. In the following, we aim to demonstrate the capability of MSH-MCCT for conducting CAVs testing with multi-source real human drivers in the loop.  
+Particularly, cross-platform interaction is achieved by organizing vehicles from diverse environments into one platoon via the mixed platform. Note that in this section, all the units have been aligned with the real-world environment. 
+
+\subsection{Experimental Setup}
+
+In our experiments, a platoon of $8$ vehicles, consisting of one head vehicle and $7$ following vehicles, are deployed to run along the track $A \rightarrow B\rightarrow C\rightarrow D\rightarrow E\rightarrow F\rightarrow A$ in Fig.~\ref{fig.track} with a lap of about $245\,\mathrm{m}$. In Experiment A, the head vehicle maintains a fixed velocity of $10.08\,\mathrm{km/h}$ during the driving track, and a half-sinusoidal perturbation occurs when it reaches point $C$ shown in Fig.~\ref{fig.track}. The perturbation period is $3.50\,\mathrm{s}$, and its amplitude is $3.02\,\mathrm{km/h}$. 
+In Experiment B, the head vehicle still maintains a fixed velocity of $10.08\,\mathrm{km/h}$, but when it reaches point $D$, a barking perturbation is imposed, which consists of three phases: decelerating to $1.01\,\mathrm{km/h}$ with a deceleration of $0.28\,\mathrm{m/s^2}$, maintaining this speed for $20\,\mathrm{s}$, and finally returning to $10.08\,\mathrm{km/h}$ after traveling $12\,\mathrm{s}$. %; see Fig.~\ref{fig.speed-B}.1 for illustration. 
+
+As for the following $7$ vehicles, the formation pattern is shown in Fig.~\ref{fig.formation-quanhun}, where there are three physical vehicles and five virtual vehicles, among which there is one virtual vehicle from the InnoSimulation environment, and the other four are from the virtual platform. Note that in the experiments, the formation is also the same as that of the example shown in  Fig.~\ref{fig.mixed platform}. Precisely, the HDVs and the CAVs are controlled as follows:
 
 \begin{itemize}
     \item 
 For the HDVs, the multi-source human drivers consist of three male drivers with different driving experiences (five, ten and twenty years respectively), and one female driver with five-year driving experience. 
 Before the formal experiments, they all familiarize themselves with operating the vehicle via the specific driving simulator, and are informed about the details of the two experimental scenarios. 
-Besides, they are advised to adopt a relatively conservative driving style to avoid potential collisions. The detailed driving mode setups for the four human drivers are illustrated within Table~\ref{tab.hdv_setup}.
+Besides, they are advised to adopt a relatively conservative driving style to avoid potential collisions.
 
 \item 
 For the CAVs, the lateral and longitudinal control are decoupled, and the control algorithms are deployed directly on the cloud. 
-Precisely, we utilize a typical preview trajectory tracking controller~\cite{amer2017modelling} for lateral control. For longitudinal control, the following Cooperative Adaptive Cruise Control (CACC) controller is adopted~\cite{milanes2013cooperative}
-\begin{equation}
+Precisely, we utilize a typical preview trajectory tracking controller~\cite{amer2017modelling} for lateral control. For longitudinal control, the following CACC controller is adopted~\cite{milanes2013cooperative}
+\begin{equation*}
 	\label{equ.cacc}
 	\begin{aligned}
 		a_i(t)=&k_{p}\left((p_i(t)-p_{i-1}(t))-d_\mathrm{des}\right)+k_{v1}(v_{1}(t)-v_i(t)) \\ &+k_{v2}(v_{i-1}(t)-v_i(t)),
 \end{aligned}
-\end{equation}
+\end{equation*}
 where the control signal $a_i$ represents the desired acceleration of vehicle $i$, and $k_{p}$, $k_{v1}$ and $k_{v2}$ are all feedback gains. The state variables $p_{i}$ and $v_{i}$ denote the longitudinal position and velocity of vehicle $i$ respectively, and $d_\mathrm{des}$ represents the desired inter-vehicle distance. 
-Since the standard longitudinal control instruction is the desired velocity, the desired acceleration $a_i(t)$ of each vehicle is converted to the velocity command signal $v_{i,\mathrm{cmd}}(t)$ in the cloud by
+Since the executable longitudinal control instruction for the miniature vehicles is the desired velocity, the desired acceleration $a_i(t)$ of each vehicle is converted to the velocity command signal $v_{i,\mathrm{cmd}}(t)$ in the cloud by
 \begin{equation*} \label{Eq:CommandVelocity}
     v_{i,\mathrm{cmd}}(t) = v_{i}(t-1) + a_i(t) \Delta t,
 \end{equation*}
@@ -761,14 +731,14 @@ where $v_{i}(t-1)$ represents the received velocity of vehicle $i$ at the last t
 	%\vspace{1mm}
 	\centering
 	\subfigure[Experiment A]
-	{\includegraphics[scale=0.35]{Figures/speed_sin.png}
+	{\includegraphics[scale=0.4]{Figures/speed_sin.png}
 		\label{fig.speed-A}}
 	%\hspace{4mm}
 	\subfigure[Experiment B]
-	{\includegraphics[scale=0.35]{Figures/speed_brake.png}
+	{\includegraphics[scale=0.4]{Figures/speed_brake.png}
 		\label{fig.speed-B}}
 	\vspace{-1mm}
-	\caption{Velocity profiles of all the vehicles in the experiments. The physical vehicle is in solid line, while the virtual vehicle is in dashed line. The CAV is in blue line, while the HDV is in black line. In Experiment A, a half-sinusoid perturbation is imposed to the head vehicle, while in Experiment B, a braking perturbation is imposed. The velocity values have been unified to the virtual platform, which has a consistent size as real-world roads. 
+	\caption{Speed profiles of all the vehicles in the experiments. The physical vehicle is in solid line, while the virtual vehicle is in dashed line. The CAV is in blue line, while the HDV is in black line. In Experiment A, a half-sinusoid perturbation is imposed to the head vehicle, while in Experiment B, a braking perturbation is imposed. The velocity values have been unified to the virtual platform, which has a consistent size as real-world roads. 
 	}
 	\label{fig.speed}
 \end{figure*}
@@ -777,40 +747,40 @@ where $v_{i}(t-1)$ represents the received velocity of vehicle $i$ at the last t
 	%\vspace{1mm}
 	\centering
 	\subfigure[Experiment A]
-	{\includegraphics[scale=0.35]{Figures/distance_sin.png}
+	{\includegraphics[scale=0.4]{Figures/distance_sin.png}
 		\label{fig.distance-A}}
 	%\hspace{4mm}
 	\subfigure[Experiment B]
-	{\includegraphics[scale=0.35]{Figures/distance_brake.png}
+	{\includegraphics[scale=0.4]{Figures/distance_brake.png}
 		\label{fig.distance-B}}
 	\vspace{-1mm}
-	\caption{Spacing profiles of all the following $7$ vehicles in the experiments. The inter-vehicle spacing here represents the distance between the centroids of the two vehicles. The physical vehicle is in solid line, while the virtual vehicle is in dashed line. The CAV is in blue line, while the HDV is in black line. Particularly, three collisions indeed occur, marked with red crosses. However, since at least one of the involved participants is a virtual vehicle, no actual damage is incurred by any vehicle. This shows that our platform supports safety-critical scenarios when testing CAV technologies. 
+	\caption{Spacing profiles of all the following $7$ vehicles in the experiments. The inter-vehicle spacing here represents the distance between the centroids of the two vehicles. The physical vehicle is in solid line, while the virtual vehicle is in dashed line. The CAV is in blue line, while the HDV is in black line. Particularly, three collisions indeed occur, marked with red crosses. However, since at least one of the participants involved is the virtual vehicle, no actual damage is incurred by any vehicle. This shows that our platform supports safety-critical scenarios when testing CAV technologies. 
 	}
 	\label{fig.distance}
 \end{figure*}
 \subsection{Experimental Results}
 
-We proceed to show the experimental results. From the two experiments, the velocity and spacing profiles of each vehicle are shown in Fig.~\ref{fig.speed} and Fig.~\ref{fig.distance}, respectively.
+We proceed to show the experimental results. The snapshots of the two experiments are shown in Fig.~\ref{fig.snapshot}, and the velocity and spacing profiles of each vehicle are shown in Fig.~\ref{fig.speed} and Fig.~\ref{fig.distance}, respectively.
 It can be clearly observed that the platoon, composed of vehicles from diverse platforms and environments, run normally in the mixed platform. 
 In Experiment~A, the CACC controllers enable the CAVs to dampen the velocity fluctuation of the head vehicle, preventing disturbances from amplifying within the platoon, while the human drivers are amplifying these fluctuations, especially the last HDV in the platoon. 
 In Experiment~B, due to the sudden braking of the head vehicle, a larger speed fluctuation is introduced into the platoon, leading to more significant speed fluctuations within the entire platoon. 
 Still, the CAVs distributed in the platoon mitigate the amplification of fluctuations, and the speed of the entire platoon does not diverge. Our multi-source human-in-the-loop experiments validate the wave-dampening capability of CACC, which is consist with the findings from the traffic simulations~\cite{van2006impact} and the real-world test~\cite{milanes2013cooperative}. 
 
-Moreover, although the drivers are instructed to adopt a conservative driving style, three collisions still occur due to the head vehicle's sudden speed fluctuations; see Fig.~\ref{fig.distance} for illustration. The minimum distance between the centroids of the two vehicles are $4.23\,\mathrm{m}$, $4.52\,\mathrm{m}$ and $3.67\,\mathrm{m}$, respectively, marked with red crosses in Fig.~\ref{fig.distance}.
+Moreover, despite the drivers being instructed to adopt a conservative driving style, three collisions still occur due to the head vehicle's sudden speed fluctuations; see Fig.~\ref{fig.distance} for illustration. The minimum distance between the centroids of two vehicles are $4.23\,\mathrm{m}$, $4.52\,\mathrm{m}$ and $3.67\,\mathrm{m}$, respectively, marked with red crosses in Fig.~\ref{fig.distance}.
 Considering the actual physical dimensions of the vehicle body, three collisions have indeed occurred. 
-However, since all the collisions involve at least one virtual vehicle, no actual damage is incurred by any vehicle. This demonstrates that our platform supports safety-critical scenarios when testing CAV technologies. %a benefit derived from our idea of ``mixing'' vehicles from diverse platforms and environments into one integrated environment for experimentation. 
+However, since all collisions involve at least one virtual vehicle, no actual damage is incurred by any vehicle. This demonstrates that our platform supports safety-critical scenarios when testing CAV technologies. %a benefit derived from our idea of ``mixing'' vehicles from diverse platforms and environments into one integrated environment for experimentation. 
 We also observe that the velocity profile of the virtual vehicle is much smoother than that of the physical vehicle. This is due to the unknown noise and disturbance in the real-world physical environment, which cannot be completely replicated in the digital simulators. 
 This is consistent with the significance of establishing our mixed platform: to fully explore and utilize the advantages of diverse platforms and environments. 
-These experimental results validate the effectiveness of MSH-MCCT for conducting CAVs testing with multi-source real human drivers in the loop, and the capability of MSH-MCCT for supporting real-time cross-platform interaction. 
+These experimental results validate the effectiveness of MSH-MCCT in conducting CAVs testing with multi-source human in the loop, and the capability of MSH-MCCT for supporting real-time cross-platform interaction. 
 
 
 
 \section{Conclusion}
 \label{sec.6}
-In this paper, we introduce our experimental platform MSH-MCCT, which is established based on the notion of mixedDT and serves for conducting CAVs testing with multi-source real human drivers in the loop via various-fidelity driving simulators. The four components of MSH-MCCT (physical, virtual, and mixed platforms, and multi-source control input) achieve synchronous operation and cross-platform interaction. Particularly, we have validated this capability of MSH-MCCT by organizing multiple vehicles from diverse platforms and environments into one platoon for cooperative driving in the mixed platform. 
-This demonstrates the great flexibility and scalability of MSH-MCCT in conducting CAVs testing with multi-source real human drivers in the loop. 
+In this paper, we introduce our experimental platform MSH-MCCT, which is established based on the notion of mixedDT and serves for conducting CAVs testing with multi-source human in the loop via driving simulators. The four components of MSH-MCCT (physical, virtual, and mixed platforms, and multi-source control input) achieve synchronous operation and cross-platform interaction. Particularly, we have validated this capability of MSH-MCCT by organizing multiple vehicles from diverse platforms and environments into one platoon for cooperative driving in the mixed platform. 
+This demonstrates the great flexibility and scalability of MSH-MCCT in conducting CAVs testing with multi-source human drivers in the loop. 
 
-Based on MSH-MCCT, multiple topics deserve future investigation. Beyond platooning, various CAV applications, such as multi-lane formation~\cite{cai2022formation}, intersection control~\cite{hao2023managing}, and on/off-ramps cooperation~\cite{liao2021cooperative}, can be tested with interaction between multiple CAVs and HDVs. Considering that roadside facilities such as traffic lights also play a crucial role in transportation system, another future direction is to explore vehicle-road cooperation involving multiple CAVs, HDVs and the intelligent roadside facilities. Besides CAV testing, the behavior pattern of human drivers in the case of CAV existence can also be captured and investigated via MSH-MCCT, which is believed to differ from human's normal driving behaviors without CAVs~\cite{soni2022behavioral}. 
+Based on MSH-MCCT, multiple topics deserve future investigation. For example, the behavior pattern of human drivers in the case of CAV existence, which is believed to differ from human's normal driving behaviors without CAVs~\cite{soni2022behavioral}, can be captured via MSH-MCCT. Beyond platooning, various CAV applications, such as multi-lane formation~\cite{cai2022formation}, intersection control~\cite{chen2021mixed}, and on/off-ramps cooperation~\cite{liao2021cooperative}, can be tested with interaction between multiple HDVs. Considering that roadside facilities such as traffic lights also play a crucial role in transportation system, another future direction is to explore vehicle-road cooperation involving multiple CAVs, HDVs and the intelligent roadside facilities. 
 %Comparing the effectiveness of various approaches in conducting driving simulation to obtain drivers’ genuine driving responses is also a topic worth investigating. 
 Finally, the cloud constitutes the core of MSH-MCCT, and how to construct a more powerful and flexible mixed platform based on the multi-layered cloud architecture is also an interesting topic. 
 
@@ -867,6 +837,7 @@ Finally, the cloud constitutes the core of MSH-MCCT, and how to construct a more
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
+\begin{comment}
     
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Jianghong}}]
 	{Jianghong Dong} received the B.E. degree from Tsinghua University, Beijing, China, in 2020. He is currently a Ph.D. candidate in mechanical engineering with the School of Vehicle and Mobility, Tsinghua University. His research interests include connected and automated vehicles, multi-vehicle coordinated control, and vehicle-road-cloud integration control.
@@ -874,31 +845,8 @@ Finally, the cloud constitutes the core of MSH-MCCT, and how to construct a more
 
 
 
-
-
 %\vspace{-7mm}
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Jiawei}}]{Jiawei Wang} (Graduate Student Member, IEEE) received the B.E. degree from Tsinghua University, Beijing, China, in 2018. He is currently a Ph.D. candidate in mechanical engineering with the School of Vehicle and Mobility, Tsinghua University. He was also a visiting Ph.D. student with the Automatic Control Laboratory at EPFL (École Polytechnique Fédérale de Lausanne) in Switzerland from 2021 to 2022. His research interests include connected automated vehicles, distributed control and optimization, and data-driven control. He was a recipient of the National Scholarship at Tsinghua University in 2015, 2020 and 2022. He received the Best Paper Award at the 18th COTA International Conference of Transportation Professionals in 2018, and the Annual Best Paper Award for the Journal of Transport Information and Safety in 2021. 
-\end{IEEEbiography}
 
-%\vspace{-7mm}
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Chunying}}]
-	{Chunying Yang} received the B.E. degree from Beijingjiaotong University, Beijing, China, in 2019. She received M.S. degree in automotive engineering from Beihang University in 2021. She was also a visiting student in School of Vehicle and Mobility, Tsinghua Univeristy in 2021. She is currently an algorithm engineer in Beijing Idriverplus Technology Co., Ltd. Her research interests include connected and automated vehicles, digital twin, and modeling of cloud control system. 
-
-
-\end{IEEEbiography}
-
-%\vspace{-7mm}
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Mengchi}}]
-	{Mengchi Cai} received his B.E. degree and Ph. D. degree from School of Vehicle and Mobility, Tsinghua University, Beijing, China, in 2018 and 2023, respectively. He was recipients of the National Scholarship and Comprehensive Excellent Scholarship in Tsinghua University. He has been honored the Shuimu Tsinghua Scholarship, and is currently a postdoctoral researcher at Intelligent and Connected Vehicles Lab, School of Vehicle and Mobility, Tsinghua University. His research interests include connected and automated vehicles, multi-vehicle formation control, and unsignalized intersection cooperation. 
-\end{IEEEbiography}
-
-%\vspace{-7mm}
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Chaoyi}}]
-	{Chaoyi Chen} (Student Member, IEEE) received the B.E. degree from Tsinghua University, Beijing, China, in 2016, the M.S. from Tsinghua University, Beijing, China and RWTH Aachen University, Aachen, Germany in 2019, and the Ph.D. degrees from Tsinghua University, Beijing, China in 2023. He is currently a Post-Doctoral Research Fellow with the School of Vehicle and Mobility, Tsinghua University. He was a recipient of the Scholarship of Strategic Partnership RWTH Aachen University and Tsinghua University. His research interests include vehicular network, control theory and cooperative control.
-\end{IEEEbiography}
-
-
-%\vspace{-7mm}
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Qing}}]
 	{Qing Xu} received his B.E. and M.S. degrees in automotive engineering from Beihang University, Beijing, China, in 2006 and 2008 respectively, and the Ph.D. degree in automotive engineering from Beihang University in 2014.
 	
@@ -906,13 +854,49 @@ Finally, the cloud constitutes the core of MSH-MCCT, and how to construct a more
 \end{IEEEbiography}
 
 %\vspace{-7mm}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Jiawei}}]{Jiawei Wang} (Graduate Student Member, IEEE) received the B.E. degree from Tsinghua University, Beijing, China, in 2018. He is currently a Ph.D. candidate in mechanical engineering with the School of Vehicle and Mobility, Tsinghua University. He was also a visiting Ph.D. student with the Automatic Control Laboratory at EPFL (École Polytechnique Fédérale de Lausanne) in Switzerland from 2021 to 2022. His research interests include connected automated vehicles, distributed control and optimization, and data-driven control. He was a recipient of the National Scholarship at Tsinghua University in 2015, 2020 and 2022. He received the Best Paper Award at the 18th COTA International Conference of Transportation Professionals in 2018, and the Annual Best Paper Award for the Journal of Transport Information and Safety in 2021. 
+\end{IEEEbiography}
+
+%\vspace{-7mm}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Chunying}}]
+	{Chunying Yang} received the B.E. degree from Beijingjiaotong University, Beijing, China, in 2019. She received M.S. degree in automotive engineering from Beihang University in 2021. She was also a visiting student in School of Vehicle and Mobility, Tsinghua Univeristy in 2021. She is currently an algorithm engineer in Beijing Idriverplus Technology Co., Ltd. Her research interests include connected and automated vehicles, digital twin, and modeling of cloud control system. 
+
+
+\end{IEEEbiography}
+
+%\vspace{-7mm}
+
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Mengchi}}]
+	{Mengchi Cai} received his B.E. degree and Ph. D. degree from School of Vehicle and Mobility, Tsinghua University, Beijing, China, in 2018 and 2023, respectively. He was recipients of the National Scholarship and Comprehensive Excellent Scholarship in Tsinghua University. He has been honored the Shuimu Tsinghua Scholarship, and is currently a postdoctoral researcher at Intelligent and Connected Vehicles Lab, School of Vehicle and Mobility, Tsinghua University. His research interests include connected and automated vehicles, multi-vehicle formation control, and unsignalized intersection cooperation. 
+\end{IEEEbiography}
+
+\vspace{-7mm}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Chaoyi}}]
+	{Chaoyi Chen} (Student Member, IEEE) received the B.E. degree from Tsinghua University, Beijing, China, in 2016, the M.S. from Tsinghua University, Beijing, China and RWTH Aachen University, Aachen, Germany in 2019, and the Ph.D. degrees from Tsinghua University, Beijing, China in 2023. He is currently a Post-Doctoral Research Fellow with the School of Vehicle and Mobility, Tsinghua University. He was a recipient of the Scholarship of Strategic Partnership RWTH Aachen University and Tsinghua University. His research interests include vehicular network, control theory and cooperative control.
+\end{IEEEbiography}
+
+\vspace{-7mm}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_liuyu}}]
+	{Yu Liu} received the B.E. degree from Qingdao University of Technology, Qingdao, China, in 2020.  He is currently a M.S. candidate in communication and transportation engineering with the School of Mechanical and Automotive Engineering, Qingdao University of Technology. He is also a visiting student in
+School of Vehicle and Mobility, Tsinghua Univeristy. His research interests include vehicle trajectory tracking control and driver characteristics.
+
+\end{IEEEbiography}
+
+\vspace{-7mm}
+
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Jianqiang}}]
 {Jianqiang Wang} received the B.Tech. and M.S. degrees from Jilin University of Technology, Changchun, China, in 1994 and 1997, respectively, and the Ph.D. degree from Jilin University, Changchun, in 2002. He is currently a Professor with the School of Vehicle and Mobility, Tsinghua University, Beijing, China. 
 
 He has authored over 150 papers and is a co-inventor of 99 patent applications. He was involved in over 10 sponsored projects. His active research interests include intelligent vehicles, driving assistance systems, and driver behavior. He was a recipient of the Best Paper Award in the 2014 IEEE Intelligent Vehicle Symposium, the Best Paper Award in the 14th ITS Asia Pacific Forum, the Best Paper Award in the 2017 IEEE Intelligent Vehicle Symposium, the Changjiang Scholar Program Professor in 2017, the Distinguished Young Scientists of NSF China in 2016, and the New Century Excellent Talents in 2008.
 \end{IEEEbiography}
 
-%\vspace{-7mm}
+\vspace{-7mm}
+
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{Figures/author_Keqiang}}]{Keqiang Li} received the B.Tech. degree from Tsinghua University of China, Beijing, China, in 1985, and the M.S. and Ph.D. degrees in mechanical engineering from the Chongqing University of China, Chongqing, China, in 1988 and 1995, respectively.
 	
 He is currently a Professor with the School of Vehicle and Mobility, Tsinghua University. His main research areas include automotive control system, driver assistance system, and networked dynamics and control. He is leading the national key project on ICVs (Intelligent and Connected Vehicles) in China. Dr. Li has authored more than 200 papers and is a co-inventor of over 80 patents in China and Japan.
@@ -920,6 +904,7 @@ He is currently a Professor with the School of Vehicle and Mobility, Tsinghua Un
 Dr. Li has served as Fellow Member of Society of Automotive Engineers of China, editorial boards of the \emph{International Journal of Vehicle Autonomous Systems}, Chairperson of Expert Committee of the China Industrial Technology Innovation Strategic Alliance for ICVs (CAICV), and CTO of China ICV Research Institute Company Ltd. (CICV). He has been a recipient of Changjiang Scholar Program Professor, National Award for Technological Invention in China, etc.
 \end{IEEEbiography}
 
+\end{comment}
 
 
 
