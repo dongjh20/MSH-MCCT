@@ -61,7 +61,7 @@
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=ncDpC9gAAAAJ&hl=en" target="_blank">Jianghong Dong</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://wjiawei.com" target="_blank">Jiawei Wang</a><sup>2,*</sup>,</span>
+                  <a href="https://wjiawei.com" target="_blank">Jiawei Wang</a><sup>2</sup>,</span>
                   <span class="author-block">
                     <a href="" target="_blank">Chunying Yang</a><sup>1</sup>
                   </span>
@@ -79,7 +79,7 @@
                     <a href="https://scholar.google.com/citations?user=5mUoFN0AAAAJ&hl=en" target="_blank">Jianqiang Wang</a><sup>1</sup>,
                   </span>
                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ&hl=en" target="_blank">Keqiang Li</a><sup>1,*</sup>
+                    <a href="https://scholar.google.com/citations?user=x58fnLQAAAAJ&hl=en" target="_blank">Keqiang Li</a><sup>1</sup>
                   </span>
                   </div>
 
@@ -275,15 +275,25 @@ In the emerging mixed traffic environments, Connected and Autonomous Vehicles (C
     </div>
   </div>
 </footer>
-<!-- 访客地理位置代码 -->
 
+<!-- visitor location tracking -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       
-      <div class="image-container has-text-centered" style="max-width: 30%; margin: auto;">
+      <div class="image-container has-text-centered" style="max-width: 30%; margin: auto;" id="clustrmaps-wrapper">
         <!-- Your image here with adjusted width -->
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=lrw-A1Y_vAH3_dUw5lNQPHSpmujIgHtJ0oAeg95Gq7Q&cl=ffffff&w=a"></script>      </div>
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=lrw-A1Y_vAH3_dUw5lNQPHSpmujIgHtJ0oAeg95Gq7Q&cl=ffffff&w=a"></script>
+      </div>
+      <script>
+        document.getElementById('clustrmaps-wrapper').addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (link) {
+            e.preventDefault();
+            window.open(link.href, '_blank', 'noopener,noreferrer');
+          }
+        }, true);
+      </script>
     </div>
   </div>
 </section>
