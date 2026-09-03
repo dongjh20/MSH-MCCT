@@ -47,7 +47,7 @@
 <body>
 
 
-  <section class="hero">
+  <section class="hero paper-hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -96,32 +96,50 @@
   </div>
 </section>
 
-<div class="column has-text-centered">
-  <div class="publication-links">
+<nav class="paper-access" aria-label="Full paper links">
+  <p class="paper-access-label">Access Full Paper</p>
+  <div class="publication-links paper-access-links">
     <span class="link-block">
-      <a href="https://arxiv.org/abs/2603.17751" target="_blank"
-      class="external-link button is-normal is-rounded is-dark">
-      <span class="icon">
-        <i class="fas fa-file-pdf"></i>
-      </span>
-      <span>Access Full Paper</span>
-    </a>
-  </span>
+      <a href="https://arxiv.org/abs/2603.17751" target="_blank" rel="noopener noreferrer"
+        class="external-link button is-normal is-rounded paper-link paper-link-arxiv"
+        aria-label="Read the paper on arXiv">
+        <span class="icon" aria-hidden="true"><i class="ai ai-arxiv"></i></span>
+        <span>arXiv</span>
+      </a>
+    </span>
+    <span class="link-block">
+      <a href="https://www.researchgate.net/publication/404909459_Multisource_human-in-the-loop_digital_twin_testbed_for_connected_and_autonomous_vehicles_in_mixed_traffic_flow"
+        target="_blank" rel="noopener noreferrer"
+        class="external-link button is-normal is-rounded paper-link paper-link-researchgate"
+        aria-label="Read the paper on ResearchGate">
+        <span class="icon" aria-hidden="true"><i class="fab fa-researchgate"></i></span>
+        <span>ResearchGate</span>
+      </a>
+    </span>
+    <span class="link-block">
+      <a href="https://www.sciopen.com/article/10.26599/JICV.2026.9210084" target="_blank"
+        rel="noopener noreferrer"
+        class="external-link button is-normal is-rounded paper-link paper-link-journal"
+        aria-label="View the official publication in JICV">
+        <span class="icon" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
+        <span>JICV</span>
+      </a>
+    </span>
   </div>
-</div>
+</nav>
 
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3" style="text-align: center;">Experiment A: traffic wave scenario</h2>
-      <video poster="" id="tree" autoplay controls muted  playsinline loop height="100%">
+      <video poster="" id="tree" controls muted playsinline loop height="100%">
         <!-- Your video here -->
         <source src="https://github.com/HONGcalmJIN/MSH-MCCT-assets/assets/52435441/440c34bf-39bb-4425-8a4d-d1a5498c42a6"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        In Experiment A, the CACC controllers enable the CAVs to dampen the velocity fluctuation of the head vehicle, preventing disturbances 
+        In Experiment A, the CACC controllers enable the CAVs to dampen the velocity fluctuation of the head vehicle, preventing disturbances
         from amplifying within the platoon, while the human drivers are amplifying these fluctuations, especially the last one.
       </h2>
     </div>
@@ -156,13 +174,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-In the emerging mixed traffic environments, Connected and Autonomous Vehicles (CAVs) have to interact with surrounding human-driven vehicles (HDVs). This paper introduces MSH-MCCT (Multi-Source Human-in-the-Loop Mixed Cloud Control Testbed), a novel CAV testbed that captures complex interactions between various CAVs and HDVs. Utilizing the Mixed Digital Twin concept, which combines Mixed Reality with Digital Twin, MSH-MCCT integrates physical, virtual, and mixed platforms, along with multi-source control inputs. Bridged by the mixed platform, MSH-MCCT allows human drivers and CAV algorithms to operate both physical and virtual vehicles within multiple fields of view. Particularly, this testbed facilitates the coexistence and real-time interaction of physical and virtual CAVs & HDVs, significantly enhancing the experimental flexibility and scalability. Experiments on vehicle platooning in mixed traffic showcase the potential of MSH-MCCT to conduct CAV testing with multi-source real human drivers in the loop through driving simulators of diverse fidelity. The videos for the experiments are available at https://dongjh20.github.io/MSH-MCCT.          
+In the emerging mixed traffic environments, Connected and Autonomous Vehicles (CAVs) have to interact with surrounding human-driven vehicles (HDVs). This paper introduces MSH-MCCT (Multi-Source Human-in-the-Loop Mixed Cloud Control Testbed), a novel CAV testbed that captures complex interactions between various CAVs and HDVs. Utilizing the Mixed Digital Twin concept, which combines Mixed Reality with Digital Twin, MSH-MCCT integrates physical, virtual, and mixed platforms, along with multi-source control inputs. Bridged by the mixed platform, MSH-MCCT allows human drivers and CAV algorithms to operate both physical and virtual vehicles within multiple fields of view. Particularly, this testbed facilitates the coexistence and real-time interaction of physical and virtual CAVs & HDVs, significantly enhancing the experimental flexibility and scalability. Experiments on vehicle platooning in mixed traffic showcase the potential of MSH-MCCT to conduct CAV testing with multi-source real human drivers in the loop through driving simulators of diverse fidelity. The videos for the experiments are available at https://dongjh20.github.io/MSH-MCCT.
           </p>
         </div>
       </div>
     </div>
   </div>
-</section> 
+</section>
 <!-- End paper abstract -->
 
 <!-- Single Image with Title -->
@@ -174,7 +192,7 @@ In the emerging mixed traffic environments, Connected and Autonomous Vehicles (C
       <div class="image-container has-text-centered" style="max-width: 80%; margin: auto;">
         <!-- Your image here with adjusted width -->
         <img src="static/images/MSH-snapshotV2.jpg" alt="Descriptive Alt Text" style="height: auto;"/>
-        
+
       </div>
     </div>
   </div>
@@ -190,7 +208,7 @@ In the emerging mixed traffic environments, Connected and Autonomous Vehicles (C
       <div class="image-container has-text-centered" style="max-width: 70%; margin: auto;">
         <!-- Your image here with adjusted width -->
         <img src="static/images/formation.jpg" alt="Descriptive Alt Text" style="height: auto;"/>
-        
+
       </div>
     </div>
   </div>
@@ -207,7 +225,7 @@ In the emerging mixed traffic environments, Connected and Autonomous Vehicles (C
         </button>
       </div>
       <p>If you refer to MSH-MCCT in your research, please cite this paper. In BibTeX format:</p>
-      <pre id="bibtex-code"><code>@article{dong2026multi, 
+      <pre id="bibtex-code"><code>@article{dong2026multi,
 author = {Jianghong Dong and Chunying Yang and Mengchi Cai and Chaoyi Chen and Qing Xu and Jianqiang Wang and Jiawei Wang and Keqiang Li},
 title = {Multisource human-in-the-loop digital twin testbed for connected and autonomous vehicles in mixed traffic flow},
 year = {2026},
@@ -227,7 +245,7 @@ doi = {10.26599/JICV.2026.9210084},
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3" style="max-width: 70%; margin: auto; text-align: center;">MSH-MCCT-based work</h2> <!-- Title for the image -->
-      <br>     
+      <br>
       <h4 class="title is-size-5" style="max-width: 70%; margin: auto; text-align: left;">1. <a href="https://github.com/soc-ucsd/DeeP-LCC" target="_blank">Data-enabled predictive leading cruise control in mixed traffic</a></h4>
       <br>
       <h4 class="subtitle has-text-justified" style="max-width: 70%; margin: auto; text-align: left;">Wang J, Zheng Y, Dong J, et al. Implementation and experimental validation of data-driven predictive control for dissipating stop-and-go waves in mixed traffic[J]. IEEE Internet of Things Journal, 2023. <a href="https://arxiv.org/abs/2204.03747" target="_blank">[paper link]</a> <a href="https://www.youtube.com/watch?v=ZZ2cWhapqpc" target="_blank">[video link]</a></h4>
@@ -251,14 +269,7 @@ doi = {10.26599/JICV.2026.9210084},
   </div>
 </section>
 
-<!--BibTex citation 
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
---End BibTex citation -->
+
 
 
 
@@ -277,54 +288,22 @@ doi = {10.26599/JICV.2026.9210084},
   </div>
 </footer>
 
-<!-- visitor location tracking -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      
-      <div class="image-container has-text-centered" style="max-width: 30%; margin: auto;" id="clustrmaps-wrapper">
-        <!-- Your image here with adjusted width -->
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=lrw-A1Y_vAH3_dUw5lNQPHSpmujIgHtJ0oAeg95Gq7Q&cl=ffffff&w=a"></script>
-      </div>
-      <script>
-        document.getElementById('clustrmaps-wrapper').addEventListener('click', function(e) {
-          var link = e.target.closest('a');
-          if (link) {
-            e.preventDefault();
-            window.open(link.href, '_blank', 'noopener,noreferrer');
-          }
-        }, true);
-      </script>
-    </div>
-  </div>
-</section>
 <!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-<!-- Default Statcounter code for MSH-MCCT
-https://dongjh20.github.io/MSH-MCCT -->
-<div style="text-align: center;">
-<script type="text/javascript">
-  var sc_project=12959948; 
-  var sc_invisible=0; 
-  var sc_security="a89b97a4"; 
-  var scJsHost = "https://";
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
+<div class="site-counter">
+  <script type="text/javascript">
+    var sc_project=12959948;
+    var sc_invisible=0;
+    var sc_security="a89b97a4";
+    var scJsHost = "https://";
+    document.write("<sc"+"ript type='text/javascript' src='" +
+    scJsHost+
+    "statcounter.com/counter/counter.js'></"+"script>");
   </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - Statcounter" href="https://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/12959948/0/a89b97a4/0/"
-  alt="Web Analytics Made Easy - Statcounter"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  </div>
-  <!-- End of Statcounter Code -->
-
+  <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter"
+    href="https://statcounter.com/" target="_blank" rel="noopener noreferrer"><img class="statcounter"
+    src="https://c.statcounter.com/12959948/0/a89b97a4/0/"
+    alt="Web Analytics Made Easy - Statcounter" referrerpolicy="no-referrer-when-downgrade"></a></div></noscript>
+</div>
 <!-- End of Statcounter Code -->
-
-
   </body>
   </html>

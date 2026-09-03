@@ -82,6 +82,91 @@ body {
     margin: 8px 4px;
 }
 
+/* Paper access links */
+.paper-access {
+  width: calc(100% - 3rem);
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 3.5rem;
+  border-top: 1px solid #dbe3ec;
+  text-align: center;
+}
+
+.paper-hero .hero-body {
+  padding-bottom: 2rem;
+}
+
+.paper-hero .publication-authors:last-child {
+  margin-bottom: 0;
+}
+
+.paper-access-label {
+  margin: 0 0 1.35rem;
+  color: #10233f;
+  font-family: 'Castoro', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.paper-access-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.paper-access .link-block a {
+  margin: 0;
+}
+
+.paper-link {
+  min-width: 134px;
+  height: 56px;
+  padding: 0 1.25rem !important;
+  color: #10233f !important;
+  background: #ffffff !important;
+  border: 1px solid #dbe3ec !important;
+  border-radius: 16px !important;
+  box-shadow: 0 3px 7px rgb(15 35 63 / 0.09);
+  font-size: 1rem;
+}
+
+.paper-link:hover {
+  color: #10233f !important;
+  background: #f8fafc !important;
+  border-color: #bdc9d8 !important;
+  box-shadow: 0 6px 14px rgb(15 35 63 / 0.13);
+  transform: translateY(-2px);
+}
+
+.paper-link .icon {
+  margin-right: 0.35rem !important;
+  font-size: 1.2rem;
+}
+
+.paper-link-arxiv .icon {
+  color: #b31b1b;
+}
+
+.paper-link-researchgate .icon {
+  color: #00a69c;
+}
+
+.paper-link-journal .icon {
+  color: #3158fa;
+}
+
+.site-counter {
+  padding: 0 1.5rem 2rem;
+  text-align: center;
+}
+
+.site-counter .statcounter {
+  display: inline-block;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -302,7 +387,7 @@ body {
   transform: scale(1.2);
 }
 
-.eql-cntrb { 
+.eql-cntrb {
   font-size: 0.875rem;
   color: var(--text-light);
   font-style: italic;
@@ -603,56 +688,65 @@ code {
   .hero-body {
     padding: 2rem 1rem;
   }
-  
+
   .publication-header .hero-body {
     padding: 3rem 1rem 2rem;
   }
-  
+
   .publication-title {
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.5rem !important;
   }
-  
+
   .publication-authors {
     font-size: 1rem !important;
   }
-  
+
   .button {
     margin: 0.25rem !important;
     font-size: 0.875rem !important;
     padding: 0.75rem 1rem !important;
   }
-  
+
   .more-works-container {
     bottom: 2rem;
     right: 1rem;
     top: auto;
   }
-  
+
   .more-works-btn {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
   }
-  
+
   .more-works-dropdown {
     width: calc(100vw - 2rem);
     right: -1rem;
     bottom: calc(100% + 0.5rem);
     top: auto;
   }
-  
+
   .results-carousel .item {
     margin: 0.5rem;
     padding: 1rem;
   }
-  
+
   .teaser .hero-body {
     padding: 1rem;
   }
-  
+
   .content.has-text-justified {
     font-size: 1rem;
+  }
+
+  .paper-access {
+    width: calc(100% - 2rem);
+    padding: 1.1rem 1rem 2.5rem;
+  }
+
+  .paper-hero .hero-body {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -660,23 +754,23 @@ code {
   .publication-title {
     font-size: 2rem !important;
   }
-  
+
   .hero-body {
     padding: 1.5rem 0.75rem;
   }
-  
+
   .more-works-container {
     position: fixed;
     bottom: 2rem;
     right: 1rem;
     z-index: 1000;
   }
-  
+
   .more-works-btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.75rem;
   }
-  
+
   .more-works-dropdown {
     position: absolute;
     bottom: calc(100% + 0.5rem);
@@ -684,15 +778,31 @@ code {
     width: calc(100vw - 2rem);
     max-width: 90vw;
   }
-  
+
   .link-block {
     display: block;
     margin-bottom: 0.5rem;
   }
-  
+
   .button {
     width: 100%;
     justify-content: center;
+  }
+
+  .paper-access {
+    width: calc(100% - 1.5rem);
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .paper-access-links {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .paper-access .link-block {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -701,7 +811,7 @@ code {
   .hero-body {
     padding: 3rem 2rem;
   }
-  
+
   .publication-header .hero-body {
     padding: 4rem 2rem 3rem;
   }
@@ -737,11 +847,11 @@ a:focus {
   .more-works-container {
     display: none;
   }
-  
+
   .hero, .section {
     animation: none;
   }
-  
+
   .button {
     background: transparent !important;
     color: var(--text-primary) !important;
